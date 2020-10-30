@@ -7,15 +7,25 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            Text("1")
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("One")
+                }
+            Text("2")
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Two")
+                }
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

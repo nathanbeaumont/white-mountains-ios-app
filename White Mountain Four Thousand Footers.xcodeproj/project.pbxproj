@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F279981E254BA53C003AD7EB /* White_Mountain_Four_Thousand_FootersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981D254BA53C003AD7EB /* White_Mountain_Four_Thousand_FootersApp.swift */; };
+		F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */; };
 		F2799820254BA53C003AD7EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981F254BA53C003AD7EB /* ContentView.swift */; };
 		F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799821254BA53E003AD7EB /* Assets.xcassets */; };
 		F2799825254BA53E003AD7EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799824254BA53E003AD7EB /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "White Mountain Four Thousand Footers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F279981D254BA53C003AD7EB /* White_Mountain_Four_Thousand_FootersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = White_Mountain_Four_Thousand_FootersApp.swift; sourceTree = "<group>"; };
+		F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMountainApp.swift; sourceTree = "<group>"; };
 		F279981F254BA53C003AD7EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2799821254BA53E003AD7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2799824254BA53E003AD7EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,7 +39,9 @@
 				F279981C254BA53C003AD7EB /* White Mountain Four Thousand Footers */,
 				F279981B254BA53C003AD7EB /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		F279981B254BA53C003AD7EB /* Products */ = {
 			isa = PBXGroup;
@@ -69,7 +71,7 @@
 		F279982E254BA6B6003AD7EB /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F279981D254BA53C003AD7EB /* White_Mountain_Four_Thousand_FootersApp.swift */,
+				F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */,
 				F279981F254BA53C003AD7EB /* ContentView.swift */,
 				F2799823254BA53E003AD7EB /* Preview Content */,
 			);
@@ -155,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2799820254BA53C003AD7EB /* ContentView.swift in Sources */,
-				F279981E254BA53C003AD7EB /* White_Mountain_Four_Thousand_FootersApp.swift in Sources */,
+				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
