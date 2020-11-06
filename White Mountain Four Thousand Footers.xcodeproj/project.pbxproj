@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */; };
+		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
 		F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */; };
 		F2799820254BA53C003AD7EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981F254BA53C003AD7EB /* HomeView.swift */; };
 		F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799821254BA53E003AD7EB /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_White_Mountain_Four_Thousand_Footers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		970DD44DBF43FF3B62B0F504 /* Pods-White Mountain Four Thousand Footers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.debug.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.debug.xcconfig"; sourceTree = "<group>"; };
 		A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.release.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.release.xcconfig"; sourceTree = "<group>"; };
+		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
 		F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "White Mountain Four Thousand Footers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMountainApp.swift; sourceTree = "<group>"; };
 		F279981F254BA53C003AD7EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 				A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F268817F2554EF64009F6E9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F2799811254BA53B003AD7EB = {
@@ -104,9 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				F2F44BAA254F9A14002847B1 /* API */,
-				F2F44BA5254F95B1002847B1 /* Models */,
+				F2F44BA5254F95B1002847B1 /* APIModels */,
+				F268817F2554EF64009F6E9B /* Models */,
+				F2F44BB4254FA317002847B1 /* Views */,
 				F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */,
-				F279981F254BA53C003AD7EB /* HomeView.swift */,
 				F2799823254BA53E003AD7EB /* Preview Content */,
 			);
 			path = Source;
@@ -121,12 +132,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F2F44BA5254F95B1002847B1 /* Models */ = {
+		F2F44BA5254F95B1002847B1 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
-				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
 			);
-			path = Models;
+			path = APIModels;
 			sourceTree = "<group>";
 		};
 		F2F44BAA254F9A14002847B1 /* API */ = {
@@ -137,6 +147,15 @@
 				F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		F2F44BB4254FA317002847B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F279981F254BA53C003AD7EB /* HomeView.swift */,
+				F26881782554EF0C009F6E9B /* MountainPeaksView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */,
 				F2799820254BA53C003AD7EB /* HomeView.swift in Sources */,
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,

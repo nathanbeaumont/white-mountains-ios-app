@@ -18,7 +18,7 @@ struct APIRequest<ModelClass: Codable> {
     var path: String
 
     var url: URL? {
-        return URL(string: host + path)
+        return URL(string: host + version + path)
     }
 
     struct Constants {

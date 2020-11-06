@@ -10,10 +10,10 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         TabView {
-            Text("1")
+            MountainPeaksView()
                 .tabItem {
-                    Image(systemName: "star")
-                    Text("One")
+                    Image(systemName: "taskCompleted")
+                    Text("Mountain Peaks")
                 }
             Text("2")
                 .tabItem {

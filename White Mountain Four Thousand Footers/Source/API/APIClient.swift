@@ -14,9 +14,9 @@ class APIClient<APIModel: Codable> {
     case notFound = 404
   }
 
-  class func perform(Request apiRequest: APIRequest<APIModel>,
+  class func perform(request apiRequest: APIRequest<APIModel>,
                      success: @escaping (APIModel) -> Void,
-                     failure: @escaping (Error) -> Void) {
+                     failure: ((Error) -> Void)? = nil) {
     guard let url = apiRequest.url else {
         return
     }
@@ -27,7 +27,7 @@ class APIClient<APIModel: Codable> {
         switch response.result {
         case .success:
           guard let data = response.data else {
-            failure(NSError(domain: url.path, code: response.response?.statusCode ?? 200,
+            failure?(NSError(domain: url.path, code: response.response?.statusCode ?? 200,
                             userInfo: ["errorDescription": "Could not convert to model object"]))
             return
           }
@@ -36,12 +36,12 @@ class APIClient<APIModel: Codable> {
             let model = try JSONDecoder().decode(apiRequest.modelClass, from: data)
             success(model)
           } catch {
-            failure(NSError(domain: url.path, code: response.response?.statusCode ?? 200,
+            failure?(NSError(domain: url.path, code: response.response?.statusCode ?? 200,
                             userInfo: ["errorDescription": "Could not convert to model object"]))
           }
 
         case .failure(let error):
-            failure(error)
+            failure?(error)
         }
       })
   }
