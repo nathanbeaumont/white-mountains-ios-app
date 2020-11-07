@@ -13,8 +13,8 @@ struct MountainPeaksView: View {
 
     var body: some View {
         List(mountainPeaks, id: \.id) { peak in
-            Text("\(peak.name)")
-        }.onAppear(perform:loadMountainPeaks)
+            MountainPeakCell(mountainPeak: peak)
+        }.onAppear(perform: loadMountainPeaks)
     }
 
     private func loadMountainPeaks() {
