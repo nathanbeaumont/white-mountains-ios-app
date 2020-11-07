@@ -9,12 +9,21 @@ import SwiftUI
 
 struct MountainPeaksView: View {
 
+    init() {
+        UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
+    }
+
     @State private var mountainPeaks = [MountainPeak]()
 
     var body: some View {
         List(mountainPeaks, id: \.id) { peak in
             MountainPeakCell(mountainPeak: peak)
-        }.onAppear(perform: loadMountainPeaks)
+        }
+        .listRowInsets(.none)
+        .listStyle(SidebarListStyle())
+        .onAppear(perform: loadMountainPeaks)
     }
 
     private func loadMountainPeaks() {
