@@ -15,7 +15,7 @@ struct HomeView: View {
                     Image(systemName: "taskCompleted")
                     Text("Mountain Peaks")
                 }
-                .background(Color.Custom.backgroundGreeen)
+                .background(Color.Custom.backgroundGreen)
             Text("Map")
                 .tabItem {
                     Image(systemName: "star.fill")

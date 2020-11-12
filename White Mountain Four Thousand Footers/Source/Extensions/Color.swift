@@ -21,14 +21,18 @@ extension Color {
     }
 
     struct Custom {
-        static var backgroundGreeen: Color {
-            return Color.colorWithRed(150, green: 175, blue: 139)
+        static var backgroundGreen: Color {
+            return Color.colorWithRed(140, green: 179, blue: 105)
+        }
+
+        static var darkBackgroundGreen: Color {
+            return Color.colorWithRed(91, green: 118, blue: 70)
         }
     }
 }
 
 struct Color_Previews: PreviewProvider {
     static var previews: some View {
-        Color.Custom.backgroundGreeen
+        Color.Custom.darkBackgroundGreen
     }
 }
