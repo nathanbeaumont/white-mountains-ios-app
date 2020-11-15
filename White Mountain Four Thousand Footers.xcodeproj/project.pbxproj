@@ -18,6 +18,11 @@
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
 		F2CDCDFC25560250000269EE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFB25560250000269EE /* Font.swift */; };
 		F2CDCE00255602CC000269EE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFF255602CC000269EE /* Color.swift */; };
+		F2D23AC825618C2F0074A7C3 /* RegisterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */; };
+		F2D23ACB25618D990074A7C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACA25618D990074A7C3 /* String.swift */; };
+		F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */; };
+		F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
+		F2EE0669255CD0F800C304FC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE0668255CD0F800C304FC /* RegisterView.swift */; };
 		F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BA6254F95E9002847B1 /* MountainPeak.swift */; };
 		F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAB254F9A22002847B1 /* APIClient.swift */; };
 		F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAE254F9AD8002847B1 /* APIRequest.swift */; };
@@ -40,6 +45,11 @@
 		F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MountainPeak+Fixture.swift"; sourceTree = "<group>"; };
 		F2CDCDFB25560250000269EE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		F2CDCDFF255602CC000269EE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfo.swift; sourceTree = "<group>"; };
+		F2D23ACA25618D990074A7C3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
+		F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
+		F2EE0668255CD0F800C304FC /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		F2F44BA6254F95E9002847B1 /* MountainPeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeak.swift; sourceTree = "<group>"; };
 		F2F44BAB254F9A22002847B1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F2F44BAE254F9AD8002847B1 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
@@ -79,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F20EA06E25574EAE0048F982 /* SignInView.swift */,
+				F2EE0668255CD0F800C304FC /* RegisterView.swift */,
 			);
 			path = "Login Flow";
 			sourceTree = "<group>";
@@ -87,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
+				F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F2799824254BA53E003AD7EB /* Preview Assets.xcassets */,
+				F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -164,8 +177,17 @@
 			children = (
 				F2CDCDFB25560250000269EE /* Font.swift */,
 				F2CDCDFF255602CC000269EE /* Color.swift */,
+				F2D23ACA25618D990074A7C3 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2D23ACD25619E160074A7C3 /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */,
+			);
+			path = "Reusable Views";
 			sourceTree = "<group>";
 		};
 		F2F44BAA254F9A14002847B1 /* API */ = {
@@ -181,6 +203,7 @@
 		F2F44BB4254FA317002847B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F2D23ACD25619E160074A7C3 /* Reusable Views */,
 				F20EA06D25574E8E0048F982 /* Login Flow */,
 				F279981F254BA53C003AD7EB /* HomeView.swift */,
 				F26881782554EF0C009F6E9B /* MountainPeaksView.swift */,
@@ -303,9 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */,
+				F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */,
 				F2799820254BA53C003AD7EB /* HomeView.swift in Sources */,
+				F2EE0669255CD0F800C304FC /* RegisterView.swift in Sources */,
 				F2CDCE00255602CC000269EE /* Color.swift in Sources */,
 				F2CDCDFC25560250000269EE /* Font.swift in Sources */,
+				F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */,
 				F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */,
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInView.swift in Sources */,
@@ -313,6 +339,8 @@
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
 				F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */,
+				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,
+				F2D23AC825618C2F0074A7C3 /* RegisterInfo.swift in Sources */,
 				F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

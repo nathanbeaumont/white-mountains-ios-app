@@ -28,13 +28,13 @@ struct SignInView: View {
                     LoginButton(buttonTitle: "Register",
                                 background: Color.Custom.backgroundGreen) {
                         print("Sign Up")
-                    }
-                    .padding(.bottom, 10)
+                        }
+                        .padding(.bottom, 10)
 
                     LoginButton(buttonTitle: "Sign In",
-                                background: Color.Custom.darkBackgroundGreen){
-                        print("Sign In")
-                    }
+                                background: Color.Custom.darkBackgroundGreen) {
+                            print("Sign In")
+                        }
                 }
                 .padding(.bottom, 30)
             } 
