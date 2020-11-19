@@ -12,4 +12,8 @@ extension Font {
     static func avenirMedium(withSize size: CGFloat) -> Font {
         return Font.custom("Avenir-Medium", size: size)
     }
+
+    static func avenirHeavy(withSize size: CGFloat) -> Font {
+        return Font.custom("Avenir-Heavy", size: size)
+    }
 }

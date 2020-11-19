@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RegisterView: View {
 
-    @State private var welcomeTextRect: CGRect = CGRect()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var viewRouter: ViewRouter
 
     var body: some View {
         ZStack {
@@ -24,12 +25,32 @@ struct RegisterView: View {
                 RegisterTextFields()
                     .opacity(0.95)
                 Spacer()
+
+                Button(action: {
+
+                }, label: {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color.Custom.backgroundGreen)
+                            .cornerRadius(20.0)
+                        Text("Complete Registration")
+                            .font(Font.avenirMedium(withSize: 25.0))
+                            .foregroundColor(.white)
+                            .fixedSize()
+                            .padding(15.0)
+                            .layoutPriority(1)
+                    }
+                })
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: NavigationBackButton(buttonAction: {
+            self.presentationMode.wrappedValue.dismiss()
+        }))
     }
 }
 
-struct RegisterTextFields: View {
+private struct RegisterTextFields: View {
 
     @State private var email: String = ""
     @State private var name: String = ""
@@ -73,7 +94,7 @@ struct RegisterTextFields: View {
     }
 }
 
-struct WelecomeHeader: View {
+private struct WelecomeHeader: View {
     var body: some View {
         ZStack {
             Rectangle()
@@ -92,6 +113,6 @@ struct WelecomeHeader: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView().environmentObject(ViewRouter())
     }
 }
