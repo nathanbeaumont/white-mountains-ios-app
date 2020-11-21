@@ -10,7 +10,6 @@ import SwiftUI
 struct RegisterView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @EnvironmentObject var viewRouter: ViewRouter
 
     var body: some View {
         ZStack {
@@ -104,6 +103,6 @@ private struct RegisterTextFields: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView().environmentObject(ViewRouter())
+        RegisterView()
     }
 }

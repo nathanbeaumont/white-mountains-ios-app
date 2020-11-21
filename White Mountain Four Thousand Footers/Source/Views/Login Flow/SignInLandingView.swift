@@ -9,8 +9,6 @@ import SwiftUI
 
 struct SignInLandingView: View {
 
-    @EnvironmentObject var viewRouter: ViewRouter
-
     var body: some View {
         NavigationView {
             ZStack {
@@ -30,11 +28,13 @@ struct SignInLandingView: View {
                     
                     VStack {
                         LoginButton(buttonTitle: "Register",
-                                    background: Color.Custom.backgroundGreen)
+                                    background: Color.Custom.backgroundGreen,
+                                    destinationView: RegisterView())
                             .padding(.bottom, 10)
 
                         LoginButton(buttonTitle: "Sign In",
-                                    background: Color.Custom.darkBackgroundGreen)
+                                    background: Color.Custom.darkBackgroundGreen,
+                                    destinationView: SignInView())
                     }
                     .padding(.bottom, 30)
                 }
@@ -47,13 +47,14 @@ struct SignInLandingView: View {
     }
 }
 
-private struct LoginButton: View {
+private struct LoginButton<DestinationView: View>: View {
 
     let buttonTitle: String
     let background: Color
+    let destinationView: DestinationView
 
     var body: some View {
-        NavigationLink(destination: RegisterView()) {
+        NavigationLink(destination: destinationView) {
             Text(buttonTitle)
             .frame(width: 325, height: 60, alignment: .center)
             .font(Font.avenirMedium(withSize: 24.0))
@@ -68,7 +69,6 @@ struct SignInLandingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SignInLandingView()
-                .environmentObject(ViewRouter())
                 .previewDevice("iPhone 11")
         }
     }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SignInView: View {
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
         ZStack {
             Image("Ridge_Path")
@@ -37,7 +40,12 @@ struct SignInView: View {
                 })
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: NavigationBackButton(buttonAction: {
+            self.presentationMode.wrappedValue.dismiss()
+        }))
     }
+    
 }
 
 private struct SignInTextFields: View {
