@@ -22,13 +22,27 @@ struct PlaceholderTextField: View {
     }
 }
 
+struct PlaceholderSecureField: View {
+    var placeholder: Text
+    var commit: () -> () = { }
+
+    @Binding var text: String
+
+    var body: some View {
+        ZStack(alignment: .leading) {
+            if text.isEmpty { placeholder }
+            SecureField("", text: $text, onCommit: commit)
+        }
+    }
+}
+
 struct PlaceholderTextField_Previews: PreviewProvider {
 
     @State var text: String
 
     static var previews: some View {
         StatefulPreviewWrapper("") {
-            PlaceholderTextField(placeholder: Text("Nathan")
+            PlaceholderSecureField(placeholder: Text("Nathan")
                                     .foregroundColor(.red), text: $0)
         }
     }

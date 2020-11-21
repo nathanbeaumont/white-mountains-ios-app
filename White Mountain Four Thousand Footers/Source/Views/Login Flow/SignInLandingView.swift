@@ -47,7 +47,7 @@ struct SignInLandingView: View {
     }
 }
 
-struct LoginButton: View {
+private struct LoginButton: View {
 
     let buttonTitle: String
     let background: Color
@@ -64,7 +64,7 @@ struct LoginButton: View {
     }
 }
 
-struct SignInView_Previews: PreviewProvider {
+struct SignInLandingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SignInLandingView()

@@ -20,10 +20,9 @@ struct RegisterView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                WelecomeHeader()
+                WelcomeHeader(title: "Welcome")
                     .padding(.bottom, 50)
                 RegisterTextFields()
-                    .opacity(0.95)
                 Spacer()
 
                 Button(action: {
@@ -72,14 +71,17 @@ private struct RegisterTextFields: View {
     var body: some View {
         VStack(spacing: 20) {
             ForEach(0..<textFieldPlaceHolders.count) { index in
-                placeholderTextField(index: index)
+                if index <= 1 { placeholderTextField(index: index) }
+                if index > 1 { placeholderSecureField(index: index) }
+
                 Divider()
             }
         }
         .frame(minWidth: 350)
         .fixedSize()
         .padding([.leading, .trailing], 15)
-        .padding([.top, .bottom], 25)
+        .padding([.top], 25)
+        .padding([.bottom], 10)
         .background(Color.white)
         .cornerRadius(25.0)
     }
@@ -89,24 +91,13 @@ private struct RegisterTextFields: View {
         return PlaceholderTextField(placeholder: placeholder, text: textFieldBindings[index])
     }
 
+    private func placeholderSecureField(index: Int) -> PlaceholderSecureField {
+        let placeholder = Text(textFieldPlaceHolders[index]).foregroundColor(.gray)
+        return PlaceholderSecureField(placeholder: placeholder, text: textFieldBindings[index])
+    }
+
     public func userInfo() -> RegisterInfo? {
         return RegisterInfo(email: email, name: name, password: password)
-    }
-}
-
-private struct WelecomeHeader: View {
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .background(Color.white)
-                .opacity(0.4)
-            Text("Welcome")
-                .font(Font.avenirMedium(withSize: 72.0))
-                .padding()
-                .foregroundColor(.white)
-                .layoutPriority(1)
-        }
-        .cornerRadius(15.0)
     }
 }
 

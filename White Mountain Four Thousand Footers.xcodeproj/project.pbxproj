@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */; };
 		F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EA06E25574EAE0048F982 /* SignInLandingView.swift */; };
+		F2125FA02569840D00764467 /* SignInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2125F9F2569840D00764467 /* SignInInfo.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
 		F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */; };
 		F2799820254BA53C003AD7EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981F254BA53C003AD7EB /* HomeView.swift */; };
 		F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799821254BA53E003AD7EB /* Assets.xcassets */; };
 		F2799825254BA53E003AD7EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799824254BA53E003AD7EB /* Preview Assets.xcassets */; };
 		F2ABCB4E2564C5920073EE2E /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCB4D2564C5920073EE2E /* NavigationBackButton.swift */; };
+		F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCC9925661DEC0073EE2E /* SignInView.swift */; };
+		F2ABCC9D25661EEC0073EE2E /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */; };
 		F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF42555F166000269EE /* MountainPeakCell.swift */; };
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
 		F2CDCDFC25560250000269EE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFB25560250000269EE /* Font.swift */; };
@@ -36,6 +39,7 @@
 		970DD44DBF43FF3B62B0F504 /* Pods-White Mountain Four Thousand Footers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.debug.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.debug.xcconfig"; sourceTree = "<group>"; };
 		A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.release.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.release.xcconfig"; sourceTree = "<group>"; };
 		F20EA06E25574EAE0048F982 /* SignInLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLandingView.swift; sourceTree = "<group>"; };
+		F2125F9F2569840D00764467 /* SignInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInfo.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
 		F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "White Mountain Four Thousand Footers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMountainApp.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		F2799824254BA53E003AD7EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2799826254BA53E003AD7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2ABCB4D2564C5920073EE2E /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
+		F2ABCC9925661DEC0073EE2E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
 		F2CDCDF42555F166000269EE /* MountainPeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeakCell.swift; sourceTree = "<group>"; };
 		F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MountainPeak+Fixture.swift"; sourceTree = "<group>"; };
 		F2CDCDFB25560250000269EE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 			children = (
 				F20EA06E25574EAE0048F982 /* SignInLandingView.swift */,
 				F2EE0668255CD0F800C304FC /* RegisterView.swift */,
+				F2ABCC9925661DEC0073EE2E /* SignInView.swift */,
+				F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */,
 			);
 			path = "Login Flow";
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			children = (
 				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
 				F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */,
+				F2125F9F2569840D00764467 /* SignInInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,7 +345,9 @@
 				F2799820254BA53C003AD7EB /* HomeView.swift in Sources */,
 				F2EE0669255CD0F800C304FC /* RegisterView.swift in Sources */,
 				F2CDCE00255602CC000269EE /* Color.swift in Sources */,
+				F2ABCC9D25661EEC0073EE2E /* WelcomeHeader.swift in Sources */,
 				F2CDCDFC25560250000269EE /* Font.swift in Sources */,
+				F2125FA02569840D00764467 /* SignInInfo.swift in Sources */,
 				F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */,
 				F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */,
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
@@ -345,6 +356,7 @@
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
+				F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */,
 				F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */,
 				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,
 				F2ABCB4E2564C5920073EE2E /* NavigationBackButton.swift in Sources */,
