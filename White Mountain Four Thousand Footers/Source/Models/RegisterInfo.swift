@@ -20,7 +20,7 @@ struct RegisterInfo: Codable {
     }
 
     init?(email: String, name: String, password: String) {
-        guard email.isValidEmail(), name.count > 2, password.count > 8 else {
+        guard email.isValidEmail(), name.count > 2, password.count >= 8 else {
             return nil
         }
 

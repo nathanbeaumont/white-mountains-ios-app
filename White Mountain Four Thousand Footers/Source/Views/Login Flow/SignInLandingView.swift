@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignInLandingView: View {
 
+    @EnvironmentObject var viewRouter: ViewRouter
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -29,12 +31,12 @@ struct SignInLandingView: View {
                     VStack {
                         LoginButton(buttonTitle: "Register",
                                     background: Color.Custom.backgroundGreen,
-                                    destinationView: RegisterView())
+                                    destinationView: RegisterView().environmentObject(viewRouter))
                             .padding(.bottom, 10)
 
                         LoginButton(buttonTitle: "Sign In",
                                     background: Color.Custom.darkBackgroundGreen,
-                                    destinationView: SignInView())
+                                    destinationView: SignInView().environmentObject(viewRouter))
                     }
                     .padding(.bottom, 30)
                 }

@@ -17,7 +17,7 @@ struct PlaceholderTextField: View {
     var body: some View {
         ZStack(alignment: .leading) {
             if text.isEmpty { placeholder }
-            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit).accentColor(.black)
         }
     }
 }
@@ -31,7 +31,7 @@ struct PlaceholderSecureField: View {
     var body: some View {
         ZStack(alignment: .leading) {
             if text.isEmpty { placeholder }
-            SecureField("", text: $text, onCommit: commit)
+            SecureField("", text: $text, onCommit: commit).accentColor(.black)
         }
     }
 }

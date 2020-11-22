@@ -10,7 +10,11 @@
 		59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */; };
 		F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EA06E25574EAE0048F982 /* SignInLandingView.swift */; };
 		F2125FA02569840D00764467 /* SignInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2125F9F2569840D00764467 /* SignInInfo.swift */; };
+		F2534215256B152B00F78E79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2534214256B152B00F78E79 /* APIError.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
+		F2770CE02569D1B200B2943E /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CDF2569D1B200B2943E /* UserToken.swift */; };
+		F2770CE42569D37900B2943E /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CE32569D37900B2943E /* AppSession.swift */; };
+		F2770CF02569D4C600B2943E /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CEF2569D4C600B2943E /* KeyChain.swift */; };
 		F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */; };
 		F2799820254BA53C003AD7EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981F254BA53C003AD7EB /* HomeView.swift */; };
 		F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799821254BA53E003AD7EB /* Assets.xcassets */; };
@@ -40,7 +44,11 @@
 		A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.release.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.release.xcconfig"; sourceTree = "<group>"; };
 		F20EA06E25574EAE0048F982 /* SignInLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLandingView.swift; sourceTree = "<group>"; };
 		F2125F9F2569840D00764467 /* SignInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInfo.swift; sourceTree = "<group>"; };
+		F2534214256B152B00F78E79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
+		F2770CDF2569D1B200B2943E /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		F2770CE32569D37900B2943E /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		F2770CEF2569D4C600B2943E /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "White Mountain Four Thousand Footers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMountainApp.swift; sourceTree = "<group>"; };
 		F279981F254BA53C003AD7EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -112,8 +120,19 @@
 				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
 				F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */,
 				F2125F9F2569840D00764467 /* SignInInfo.swift */,
+				F2770CDF2569D1B200B2943E /* UserToken.swift */,
+				F2534214256B152B00F78E79 /* APIError.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F2770CE22569D32900B2943E /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				F2770CE32569D37900B2943E /* AppSession.swift */,
+				F2770CEF2569D4C600B2943E /* KeyChain.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 		F2799811254BA53B003AD7EB = {
@@ -162,6 +181,7 @@
 				F2CDCDF72555F54E000269EE /* Fixtures */,
 				F268817F2554EF64009F6E9B /* Models */,
 				F2799823254BA53E003AD7EB /* Preview Content */,
+				F2770CE22569D32900B2943E /* Singletons */,
 				F2F44BB4254FA317002847B1 /* Views */,
 				F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */,
 			);
@@ -340,12 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2770CE42569D37900B2943E /* AppSession.swift in Sources */,
 				F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */,
 				F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */,
 				F2799820254BA53C003AD7EB /* HomeView.swift in Sources */,
 				F2EE0669255CD0F800C304FC /* RegisterView.swift in Sources */,
 				F2CDCE00255602CC000269EE /* Color.swift in Sources */,
 				F2ABCC9D25661EEC0073EE2E /* WelcomeHeader.swift in Sources */,
+				F2770CF02569D4C600B2943E /* KeyChain.swift in Sources */,
 				F2CDCDFC25560250000269EE /* Font.swift in Sources */,
 				F2125FA02569840D00764467 /* SignInInfo.swift in Sources */,
 				F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */,
@@ -356,12 +378,14 @@
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
+				F2770CE02569D1B200B2943E /* UserToken.swift in Sources */,
 				F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */,
 				F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */,
 				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,
 				F2ABCB4E2564C5920073EE2E /* NavigationBackButton.swift in Sources */,
 				F2D23AC825618C2F0074A7C3 /* RegisterInfo.swift in Sources */,
 				F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */,
+				F2534215256B152B00F78E79 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

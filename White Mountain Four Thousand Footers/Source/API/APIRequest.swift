@@ -16,6 +16,7 @@ struct APIRequest<ModelClass: Codable> {
     var methodType: Alamofire.HTTPMethod
     var modelClass: ModelClass.Type
     var path: String
+    var parameters: [String: Any] = [:]
 
     var url: URL? {
         return URL(string: host + version + path)

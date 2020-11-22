@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-enum RegistrationPage {
-    case landingScreen
-    case registrationScreen
-    case signInScreen
+enum ApplicationState {
+    case registration
+    case authenticated
 }
 
 class ViewRouter: ObservableObject {
 
-    @Published var currentPage: RegistrationPage = .landingScreen
+    @Published var currentState: ApplicationState = .registration
 
 }
