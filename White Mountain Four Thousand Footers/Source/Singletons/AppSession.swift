@@ -15,6 +15,4 @@ final class AppSession {
     public var userAuthenticated: Bool {
         return !(KeyChain.shared.userAccessToken == nil)
     }
-
-    
 }

@@ -18,14 +18,29 @@ struct RegisterInfo: Codable {
         case name = "displayName"
         case password
     }
+}
 
-    init?(email: String, name: String, password: String) {
-        guard email.isValidEmail(), name.count > 2, password.count >= 8 else {
-            return nil
+extension RegisterInfo {
+
+    enum ValidationStatus: String {
+        case valid = ""
+        case nameLength = "Please enter a display name."
+        case emailInvalid = "Email entered is not valid"
+        case passwordComplexity = "Please make sure you password is 8 characters in length and contains 1 number"
+        case passwordsDoNotMatch = "Passwords do not match!"
+    }
+
+    public func validateInformation(repeatedPassword: String) -> ValidationStatus {
+        if name.count <= 2 {
+            return .nameLength
+        } else if !email.isValidEmail() {
+            return .emailInvalid
+        } else if !(password.isPasswordComplex()) {
+            return .passwordComplexity
+        } else if !(password == repeatedPassword) {
+            return .passwordsDoNotMatch
         }
 
-        self.email = email
-        self.name = name
-        self.password = password
+        return .valid
     }
 }

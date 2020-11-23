@@ -16,7 +16,9 @@ struct RegisterView: View {
     @State var name: String = ""
     @State var password: String = ""
     @State var repeatPassword: String = ""
+
     @State private var showingAlert = false
+    @State private var alertText: String = ""
 
     var body: some View {
         ZStack {
@@ -46,7 +48,7 @@ struct RegisterView: View {
                 }
                 .alert(isPresented: $showingAlert, content: {
                     Alert(title: Text("Error Creating User"),
-                          message: Text("User account could not be created. This email may already be in use."),
+                          message: Text(alertText),
                           dismissButton: .default(Text("Got it!")))
                 })
             }
@@ -58,19 +60,26 @@ struct RegisterView: View {
     }
 
     private func registrationCompleted() {
-        if let userInfo = RegisterInfo(email: email, name: name, password: password) {
-            let createNewUserRequest = APIRequestFactory.createNewUser(newUser: userInfo)
-            APIClient.perform(request: createNewUserRequest) { userToken in
-                KeyChain.shared.userAccessToken = userToken.userToken
-                viewRouter.currentState = .authenticated
+        let userInfo = RegisterInfo(email: email, name: name, password: password)
+        let validation = userInfo.validateInformation(repeatedPassword: repeatPassword)
+        switch validation {
+            case .nameLength, .emailInvalid, .passwordComplexity, .passwordsDoNotMatch:
+                alertText = validation.rawValue
+                showingAlert = true
+            case .valid:
+                let createNewUserRequest = APIRequestFactory.createNewUser(newUser: userInfo)
+                APIClient.perform(request: createNewUserRequest) { userToken in
+                    KeyChain.shared.userAccessToken = userToken.userToken
+                    viewRouter.currentState = .authenticated
 
-                // Set Home Screen
-            } failure: { error, response in
-                if response.response?.statusCode == 400 {
-                    // User already exists error
-                    showingAlert = true
+                    // Set Home Screen
+                } failure: { error, response in
+                    if response.response?.statusCode == 400 {
+                        // User already exists error
+                        alertText = "User account could not be created. This email may already be in use."
+                        showingAlert = true
+                    }
                 }
-            }
         }
     }
 }
