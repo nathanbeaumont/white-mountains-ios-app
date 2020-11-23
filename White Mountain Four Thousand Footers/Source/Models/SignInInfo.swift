@@ -16,11 +16,7 @@ struct SignInInfo: Codable {
         case password
     }
 
-    init?(email: String, password: String) {
-        guard email.isValidEmail(), password.count > 8 else {
-            return nil
-        }
-
+    init(email: String, password: String) {
         self.email = email
         self.password = password
     }

@@ -14,6 +14,10 @@ enum ApplicationState {
 
 class ViewRouter: ObservableObject {
 
-    @Published var currentState: ApplicationState = .registration
+    @Published var currentState: ApplicationState
 
+    init() {
+        let userLoggedIn = AppSession.shared.userAuthenticated
+        currentState = userLoggedIn ? .authenticated : .registration
+    }
 }

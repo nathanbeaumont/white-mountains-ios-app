@@ -25,4 +25,13 @@ struct APIRequestFactory {
 
         return apirequest
     }
+
+    static func signInUser(userCrudentials: SignInInfo) -> APIRequest<UserToken> {
+        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
+                                         path: "users/login",
+                                         modelClass: UserToken.self)
+        apirequest.parameters = [SignInInfo.CodingKeys.email.stringValue: userCrudentials.email,
+                                 SignInInfo.CodingKeys.password.stringValue: userCrudentials.password]
+        return apirequest
+    }
 }

@@ -10,13 +10,13 @@ import SwiftUI
 struct RegisterView: View {
 
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var viewRouter: ViewRouter
 
     @State var email: String = ""
     @State var name: String = ""
     @State var password: String = ""
     @State var repeatPassword: String = ""
     @State private var showingAlert = false
-    @EnvironmentObject var viewRouter: ViewRouter
 
     var body: some View {
         ZStack {
@@ -71,7 +71,6 @@ struct RegisterView: View {
                     showingAlert = true
                 }
             }
-
         }
     }
 }
@@ -80,29 +79,34 @@ private struct RegisterTextFields: View {
 
     let parentReigstrationView: RegisterView
 
-    private var textFieldBindings: [Binding<String>] {
-        return [parentReigstrationView.$name,
-                parentReigstrationView.$email,
-                parentReigstrationView.$password,
-                parentReigstrationView.$repeatPassword]
-    }
-    private var textFieldPlaceHolders = ["Enter your name",
-                                         "Enter your email",
-                                         "Enter a password",
-                                         "Re-enter your password"]
-
     init(parentView: RegisterView) {
         parentReigstrationView = parentView
     }
 
     var body: some View {
         VStack(spacing: 20) {
-            ForEach(0..<textFieldPlaceHolders.count) { index in
-                if index <= 1 { placeholderTextField(index: index) }
-                if index > 1 { placeholderSecureField(index: index) }
+            // Name TextField
+            PlaceholderTextField(placeholder: Text("Enter your name").foregroundColor(.gray),
+                                 textFieldContentType: .name,
+                                 text: parentReigstrationView.$name)
+            Divider()
 
-                Divider()
-            }
+            // Email TextField
+            PlaceholderTextField(placeholder: Text("Enter your email").foregroundColor(.gray),
+                                 textFieldContentType: .emailAddress,
+                                 textFieldKeyBoardType: .emailAddress,
+                                 text: parentReigstrationView.$email)
+            Divider()
+
+            // Password Textfield
+            PlaceholderSecureField(placeholder: Text("Enter a password").foregroundColor(.gray),
+                                          text: parentReigstrationView.$password)
+            Divider()
+
+            // Confirm Password Textfield
+            PlaceholderSecureField(placeholder: Text("Enter a password").foregroundColor(.gray),
+                                          text: parentReigstrationView.$repeatPassword)
+            Divider()
         }
         .frame(minWidth: 350)
         .fixedSize()
@@ -111,19 +115,6 @@ private struct RegisterTextFields: View {
         .padding([.bottom], 10)
         .background(Color.white)
         .cornerRadius(25.0)
-    }
-
-    private func placeholderTextField(index: Int) -> PlaceholderTextField {
-        let placeholder = Text(textFieldPlaceHolders[index]).foregroundColor(.gray)
-        return PlaceholderTextField(placeholder: placeholder,
-                                    text: textFieldBindings[index])
-
-    }
-
-    private func placeholderSecureField(index: Int) -> PlaceholderSecureField {
-        let placeholder = Text(textFieldPlaceHolders[index]).foregroundColor(.gray)
-        return PlaceholderSecureField(placeholder: placeholder,
-                                      text: textFieldBindings[index])
     }
 }
 

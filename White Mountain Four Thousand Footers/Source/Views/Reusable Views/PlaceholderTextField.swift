@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct PlaceholderTextField: View {
-    var placeholder: Text
-    var editingChanged: (Bool) -> () = { _ in }
+
     var commit: () -> () = { }
+    var editingChanged: (Bool) -> () = { _ in }
+    var placeholder: Text
+    var textFieldContentType: UITextContentType = .name
+    var textFieldKeyBoardType: UIKeyboardType = .default
 
     @Binding var text: String
 
     var body: some View {
         ZStack(alignment: .leading) {
             if text.isEmpty { placeholder }
-            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit).accentColor(.black)
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+                .textContentType(textFieldContentType)
+                .keyboardType(textFieldKeyBoardType)
+                .autocapitalization(textFieldKeyBoardType == .emailAddress ? .none : .sentences)
+                .accentColor(.black)
         }
     }
 }
