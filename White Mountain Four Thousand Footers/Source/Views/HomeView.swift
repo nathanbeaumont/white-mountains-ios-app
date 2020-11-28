@@ -12,13 +12,13 @@ struct HomeView: View {
         TabView {
             MountainPeaksView()
                 .tabItem {
-                    Image(systemName: "taskCompleted")
+                    Image(systemName: "list.dash")
                     Text("Mountain Peaks")
                 }
                 .background(Color.Custom.backgroundGreen)
             Text("Map")
                 .tabItem {
-                    Image(systemName: "star.fill")
+                    Image(systemName: "map.fill")
                     Text("Two")
                 }
         }

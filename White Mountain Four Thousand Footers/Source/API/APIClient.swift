@@ -21,9 +21,10 @@ class APIClient<APIModel: Codable> {
         return
     }
 
+    let parameters = (apiRequest.methodType == Alamofire.HTTPMethod.get) ? nil : apiRequest.parameters
     AF.request(url,
                method: apiRequest.methodType,
-               parameters: apiRequest.parameters,
+               parameters: parameters,
                encoding: JSONEncoding.default)
       .validate()
       .responseJSON(completionHandler: { response in
