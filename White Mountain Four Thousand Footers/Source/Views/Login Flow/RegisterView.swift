@@ -68,7 +68,7 @@ struct RegisterView: View {
                 showingAlert = true
             case .valid:
                 let createNewUserRequest = APIRequestFactory.createNewUser(newUser: userInfo)
-                APIClient.perform(request: createNewUserRequest) { userToken in
+                APIClient.shared.perform(request: createNewUserRequest) { userToken in
                     KeyChain.shared.userAccessToken = userToken.userToken
                     viewRouter.currentState = .authenticated
 

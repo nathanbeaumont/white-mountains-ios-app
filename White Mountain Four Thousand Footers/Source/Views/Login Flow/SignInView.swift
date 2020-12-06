@@ -57,7 +57,7 @@ struct SignInView: View {
     private func signIn() {
         let userInfo = SignInInfo(email: email, password: password)
         let signInRequest = APIRequestFactory.signInUser(userCrudentials: userInfo)
-        APIClient.perform(request: signInRequest) { userToken in
+        APIClient.shared.perform(request: signInRequest) { userToken in
             KeyChain.shared.userAccessToken = userToken.userToken
             viewRouter.currentState = .authenticated
         } failure: { error, response in

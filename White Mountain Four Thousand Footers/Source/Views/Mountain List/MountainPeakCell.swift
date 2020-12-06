@@ -10,6 +10,7 @@ import SwiftUI
 struct MountainPeakCell: View {
 
     let mountainPeak: MountainPeak
+    let peakHiked: Bool
 
     var body: some View {
         HStack {
@@ -24,6 +25,12 @@ struct MountainPeakCell: View {
                     .font(Font.avenirMedium(withSize: 14.0))
             }
             Spacer()
+            if peakHiked {
+                Image(systemName: "checkmark.circle")
+                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Color.Custom.darkBackgroundGreen)
+                    .font(.system(size: 44))
+            }
         }
         .padding(10)
         .background(Color.white)
@@ -35,7 +42,10 @@ struct MountainPeakCell: View {
 struct MountainPeakCell_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            MountainPeakCell(mountainPeak: MountainPeak.Fixture.mountWashingtonPeak())
+            MountainPeakCell(mountainPeak: MountainPeak.Fixture.mountWashingtonPeak(),
+                             peakHiked: true)
+            MountainPeakCell(mountainPeak: MountainPeak.Fixture.mountWashingtonPeak(),
+                             peakHiked: false)
 
         }.background(Color.pink)
     }

@@ -10,6 +10,8 @@
 		59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */; };
 		F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EA06E25574EAE0048F982 /* SignInLandingView.swift */; };
 		F2125FA02569840D00764467 /* SignInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2125F9F2569840D00764467 /* SignInInfo.swift */; };
+		F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E2E257313D4008923E4 /* MountainBag.swift */; };
+		F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E3225731A54008923E4 /* RequestInterceptor.swift */; };
 		F2534215256B152B00F78E79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2534214256B152B00F78E79 /* APIError.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
 		F2770CE02569D1B200B2943E /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CDF2569D1B200B2943E /* UserToken.swift */; };
@@ -44,6 +46,8 @@
 		A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.release.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.release.xcconfig"; sourceTree = "<group>"; };
 		F20EA06E25574EAE0048F982 /* SignInLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLandingView.swift; sourceTree = "<group>"; };
 		F2125F9F2569840D00764467 /* SignInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInfo.swift; sourceTree = "<group>"; };
+		F2163E2E257313D4008923E4 /* MountainBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainBag.swift; sourceTree = "<group>"; };
+		F2163E3225731A54008923E4 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
 		F2534214256B152B00F78E79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
 		F2770CDF2569D1B200B2943E /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
@@ -126,11 +130,12 @@
 		F268817F2554EF64009F6E9B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F2534214256B152B00F78E79 /* APIError.swift */,
+				F2163E2E257313D4008923E4 /* MountainBag.swift */,
 				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
 				F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */,
 				F2125F9F2569840D00764467 /* SignInInfo.swift */,
 				F2770CDF2569D1B200B2943E /* UserToken.swift */,
-				F2534214256B152B00F78E79 /* APIError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				F2F44BAB254F9A22002847B1 /* APIClient.swift */,
 				F2F44BAE254F9AD8002847B1 /* APIRequest.swift */,
 				F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */,
+				F2163E3225731A54008923E4 /* RequestInterceptor.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -381,7 +387,9 @@
 				F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */,
 				F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */,
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
+				F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */,
 				F2D23AD7256222820074A7C3 /* ViewRouter.swift in Sources */,
+				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,

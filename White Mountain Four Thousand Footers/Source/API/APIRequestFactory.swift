@@ -9,11 +9,8 @@ import Alamofire
 import Foundation
 
 struct APIRequestFactory {
-    static func mountainPeaks() -> APIRequest<[MountainPeak]> {
-        return APIRequest.init(methodType: HTTPMethod.get,
-                               path: "mountain_peaks",
-                               modelClass: Array<MountainPeak>.self)
-    }
+
+    // MARK: Registration Requests
 
     static func createNewUser(newUser: RegisterInfo) -> APIRequest<UserToken> {
         var apirequest = APIRequest.init(methodType: HTTPMethod.post,
@@ -33,5 +30,27 @@ struct APIRequestFactory {
         apirequest.parameters = [SignInInfo.CodingKeys.email.stringValue: userCrudentials.email,
                                  SignInInfo.CodingKeys.password.stringValue: userCrudentials.password]
         return apirequest
+    }
+
+    // MARK: Mountain Peak Requests
+
+    static func mountainPeaks() -> APIRequest<[MountainPeak]> {
+        return APIRequest.init(methodType: HTTPMethod.get,
+                               path: "mountain_peaks",
+                               modelClass: Array<MountainPeak>.self)
+    }
+
+    static func bagMountainPeak(mountainId: Int) -> APIRequest<MountainBag> {
+        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
+                                         path: "bag",
+                                         modelClass: MountainBag.self)
+        apirequest.parameters = [MountainBag.CodingKeys.mountainId.stringValue: mountainId]
+        return apirequest
+    }
+
+    static func mountainsPeaksBagged() -> APIRequest<[MountainBag]> {
+        return APIRequest.init(methodType: HTTPMethod.get,
+                               path: "bag",
+                               modelClass: Array<MountainBag>.self)
     }
 }

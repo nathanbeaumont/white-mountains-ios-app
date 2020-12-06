@@ -8,7 +8,9 @@
 import SwiftUI
 
 class MountainDataSource: ObservableObject {
+
     @Published var mountainPeaks = [MountainPeak]()
+    @Published var mountainPeaksHiked = Array<MountainBag>()
 
     fileprivate func updateSorting(filter: ListFilterView.ListFilterState) {
         switch filter {
@@ -48,7 +50,9 @@ struct MountainPeaksView: View {
                         .cornerRadius(15.0)
 
                     List(mountainDataSource.mountainPeaks, id: \.id) { peak in
-                        MountainPeakCell(mountainPeak: peak)
+                        let peakHiked = mountainDataSource.mountainPeaksHiked.peakHiked(peak.id)
+                        MountainPeakCell(mountainPeak: peak,
+                                         peakHiked: peakHiked)
                     }
                     .frame(width: geometry.size.width)
                     .listRowInsets(.none)
@@ -60,12 +64,19 @@ struct MountainPeaksView: View {
     }
 
 
-
     private func loadMountainPeaks() {
         let apiRequest =  APIRequestFactory.mountainPeaks()
-        APIClient.perform(request: apiRequest) { mountainPeaks in
+        APIClient.shared.perform(request: apiRequest) { mountainPeaks in
             self.mountainDataSource.mountainPeaks = mountainPeaks
             self.mountainDataSource.updateSorting(filter: .elevationDescending)
+            getPeaksBagged()
+        }
+    }
+
+    private func getPeaksBagged() {
+        let apiRequest =  APIRequestFactory.mountainsPeaksBagged()
+        APIClient.shared.perform(request: apiRequest) { peaks in
+            self.mountainDataSource.mountainPeaksHiked = peaks
         }
     }
 }
