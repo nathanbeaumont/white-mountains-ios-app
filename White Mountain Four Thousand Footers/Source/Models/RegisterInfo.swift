@@ -15,7 +15,7 @@ struct RegisterInfo: Codable {
 
     enum CodingKeys: String, CodingKey {
         case email
-        case name = "displayName"
+        case name = "display_name"
         case password
     }
 }

@@ -12,6 +12,7 @@
 		F2125FA02569840D00764467 /* SignInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2125F9F2569840D00764467 /* SignInInfo.swift */; };
 		F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E2E257313D4008923E4 /* MountainBag.swift */; };
 		F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E3225731A54008923E4 /* RequestInterceptor.swift */; };
+		F21E4843257D3BE1007A321D /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E4842257D3BE1007A321D /* NotificationName.swift */; };
 		F2534215256B152B00F78E79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2534214256B152B00F78E79 /* APIError.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
 		F2770CE02569D1B200B2943E /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CDF2569D1B200B2943E /* UserToken.swift */; };
@@ -48,6 +49,7 @@
 		F2125F9F2569840D00764467 /* SignInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInfo.swift; sourceTree = "<group>"; };
 		F2163E2E257313D4008923E4 /* MountainBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainBag.swift; sourceTree = "<group>"; };
 		F2163E3225731A54008923E4 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
+		F21E4842257D3BE1007A321D /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		F2534214256B152B00F78E79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
 		F2770CDF2569D1B200B2943E /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				F2CDCDFB25560250000269EE /* Font.swift */,
 				F2CDCDFF255602CC000269EE /* Color.swift */,
 				F2D23ACA25618D990074A7C3 /* String.swift */,
+				F21E4842257D3BE1007A321D /* NotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
 				F2770CE02569D1B200B2943E /* UserToken.swift in Sources */,
+				F21E4843257D3BE1007A321D /* NotificationName.swift in Sources */,
 				F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */,
 				F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */,
 				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,

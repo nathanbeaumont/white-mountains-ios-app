@@ -5,9 +5,13 @@
 //  Created by Nathan Beaumont on 11/5/20.
 //
 
+import Combine
 import SwiftUI
 
 class MountainDataSource: ObservableObject {
+
+    // Need to add this as, there is currenlty a bug with ObservalbeObject
+    let objectWillChange = ObservableObjectPublisher()
 
     @Published var mountainPeaks = [MountainPeak]()
     @Published var mountainPeaksHiked = Array<MountainBag>()
@@ -36,6 +40,8 @@ struct MountainPeaksView: View {
 
     @ObservedObject fileprivate var mountainDataSource = MountainDataSource()
 
+    let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.MountainPeakBagged)
+
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -50,7 +56,7 @@ struct MountainPeaksView: View {
                         .cornerRadius(15.0)
 
                     List(mountainDataSource.mountainPeaks, id: \.id) { peak in
-                        let peakHiked = mountainDataSource.mountainPeaksHiked.peakHiked(peak.id)
+                        let peakHiked: Bool = mountainDataSource.mountainPeaksHiked.peakHiked(peak.id)
                         MountainPeakCell(mountainPeak: peak,
                                          peakHiked: peakHiked)
                     }
@@ -58,11 +64,13 @@ struct MountainPeaksView: View {
                     .listRowInsets(.none)
                     .listStyle(SidebarListStyle())
                     .onAppear(perform: loadMountainPeaks)
+                    .onReceive(publisher, perform: { _ in
+                        self.getPeaksBagged()
+                    })
                 }
             }
         }
     }
-
 
     private func loadMountainPeaks() {
         let apiRequest =  APIRequestFactory.mountainPeaks()
@@ -76,6 +84,7 @@ struct MountainPeaksView: View {
     private func getPeaksBagged() {
         let apiRequest =  APIRequestFactory.mountainsPeaksBagged()
         APIClient.shared.perform(request: apiRequest) { peaks in
+            self.mountainDataSource.objectWillChange.send()
             self.mountainDataSource.mountainPeaksHiked = peaks
         }
     }
@@ -93,7 +102,6 @@ private struct ListFilterView: View {
     // MARK: Reactive Properties
     @ObservedObject fileprivate var mountainDataSource: MountainDataSource
     @State private var listFilterState: ListFilterView.ListFilterState = .elevationDescending
-
 
     // MARK: Computed Properties
     private var elevationButtonSelected: Bool {
@@ -153,7 +161,7 @@ private struct ListFilterView: View {
             listFilterState = .elevationDescending
         }
 
-        mountainDataSource.updateSorting(filter: listFilterState)
+        updateDataSource()
     }
 
     private func alphabeticalButtonPressed() {
@@ -165,6 +173,11 @@ private struct ListFilterView: View {
             listFilterState = .alphabeticalAZ
         }
 
+        updateDataSource()
+    }
+
+    private func updateDataSource() {
+        mountainDataSource.objectWillChange.send()
         mountainDataSource.updateSorting(filter: listFilterState)
     }
 }

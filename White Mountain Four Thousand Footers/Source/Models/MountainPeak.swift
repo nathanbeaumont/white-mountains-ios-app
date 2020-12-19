@@ -18,9 +18,9 @@ struct MountainPeak: Codable {
     enum CodingKeys: String, CodingKey {
         case ascent
         case elevation
-        case id = "mountainID"
+        case id = "mountain_id"
         case latitude
         case longitude
-        case name = "mountainName"
+        case name = "mountain_name"
     }
 }

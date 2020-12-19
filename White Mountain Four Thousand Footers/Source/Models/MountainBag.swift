@@ -12,8 +12,8 @@ struct MountainBag: Codable {
     let mountainId: Int
 
     enum CodingKeys: String, CodingKey {
-        case bagId = "id"
-        case mountainId = "mountainID"
+        case bagId = "mountain_bag_id"
+        case mountainId = "mountain_id"
     }
 }
 

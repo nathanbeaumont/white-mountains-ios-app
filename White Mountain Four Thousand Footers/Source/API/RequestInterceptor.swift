@@ -28,9 +28,10 @@ final class RequestInterceptor: Alamofire.RequestInterceptor {
     func retry(_ request: Request, for session: Session,
                dueTo error: Error,
                completion: @escaping (RetryResult) -> Void) {
-        guard let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 else {
-            KeyChain.shared.userAccessToken = nil
+        guard let response = request.task?.response as? HTTPURLResponse else {
             return completion(.doNotRetryWithError(error))
         }
+
+        if response.statusCode == 401 { KeyChain.shared.userAccessToken = nil }
     }
 }

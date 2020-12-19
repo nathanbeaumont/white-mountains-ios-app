@@ -10,7 +10,7 @@ import SwiftUI
 struct MountainPeakCell: View {
 
     let mountainPeak: MountainPeak
-    let peakHiked: Bool
+    @State var peakHiked: Bool
 
     var body: some View {
         HStack {
@@ -30,6 +30,23 @@ struct MountainPeakCell: View {
                     .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                     .foregroundColor(Color.Custom.darkBackgroundGreen)
                     .font(.system(size: 44))
+                    .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
+            } else {
+                Button(action: {
+                    let apiRequest = APIRequestFactory.bagMountainPeak(mountainId: mountainPeak.id)
+                    APIClient.shared.perform(request: apiRequest) { _ in
+                        withAnimation {
+                            peakHiked = true
+                        }
+
+                        NotificationCenter.default.post(Notification(name: Notification.Name.MountainPeakBagged))
+                    }
+                }, label: {
+                    Image(systemName: "plus.circle")
+                        .font(.system(size: 25))
+                        .padding(.trailing, 11)
+                })
+                .buttonStyle(PlainButtonStyle())
             }
         }
         .padding(10)
@@ -46,7 +63,7 @@ struct MountainPeakCell_Previews: PreviewProvider {
                              peakHiked: true)
             MountainPeakCell(mountainPeak: MountainPeak.Fixture.mountWashingtonPeak(),
                              peakHiked: false)
-
-        }.background(Color.pink)
+        }
+        .background(Color.pink)
     }
 }
