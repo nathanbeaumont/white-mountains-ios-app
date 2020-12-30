@@ -8,28 +8,6 @@
 import Combine
 import SwiftUI
 
-class MountainDataSource: ObservableObject {
-
-    // Need to add this as, there is currenlty a bug with ObservalbeObject
-    let objectWillChange = ObservableObjectPublisher()
-
-    @Published var mountainPeaks = [MountainPeak]()
-    @Published var mountainPeaksHiked = Array<MountainBag>()
-
-    fileprivate func updateSorting(filter: ListFilterView.ListFilterState) {
-        switch filter {
-            case .elevationDescending:
-                mountainPeaks.sort {  $0.elevation > $1.elevation }
-            case .elevationAscending:
-                mountainPeaks.sort {  $0.elevation < $1.elevation }
-            case .alphabeticalAZ:
-                mountainPeaks.sort {  $0.name < $1.name }
-            case .alphabeticalZA:
-                mountainPeaks.sort {  $0.name > $1.name }
-        }
-    }
-}
-
 struct MountainPeaksView: View {
 
     init() {
@@ -39,7 +17,6 @@ struct MountainPeaksView: View {
     }
 
     @ObservedObject fileprivate var mountainDataSource = MountainDataSource()
-
     let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.MountainPeakBagged)
 
     var body: some View {
@@ -63,34 +40,17 @@ struct MountainPeaksView: View {
                     .frame(width: geometry.size.width)
                     .listRowInsets(.none)
                     .listStyle(SidebarListStyle())
-                    .onAppear(perform: loadMountainPeaks)
+                    .onAppear(perform: mountainDataSource.loadMountainPeaks)
                     .onReceive(publisher, perform: { _ in
-                        self.getPeaksBagged()
+                        self.mountainDataSource.getPeaksBagged()
                     })
                 }
             }
         }
     }
-
-    private func loadMountainPeaks() {
-        let apiRequest =  APIRequestFactory.mountainPeaks()
-        APIClient.shared.perform(request: apiRequest) { mountainPeaks in
-            self.mountainDataSource.mountainPeaks = mountainPeaks
-            self.mountainDataSource.updateSorting(filter: .elevationDescending)
-            getPeaksBagged()
-        }
-    }
-
-    private func getPeaksBagged() {
-        let apiRequest =  APIRequestFactory.mountainsPeaksBagged()
-        APIClient.shared.perform(request: apiRequest) { peaks in
-            self.mountainDataSource.objectWillChange.send()
-            self.mountainDataSource.mountainPeaksHiked = peaks
-        }
-    }
 }
 
-private struct ListFilterView: View {
+struct ListFilterView: View {
 
     public enum ListFilterState {
         case elevationDescending

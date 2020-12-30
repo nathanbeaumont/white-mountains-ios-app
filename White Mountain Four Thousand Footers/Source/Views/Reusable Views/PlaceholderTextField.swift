@@ -24,6 +24,7 @@ struct PlaceholderTextField: View {
                 .textContentType(textFieldContentType)
                 .keyboardType(textFieldKeyBoardType)
                 .autocapitalization(textFieldKeyBoardType == .emailAddress ? .none : .sentences)
+                .disableAutocorrection(true)
                 .accentColor(.black)
         }
     }

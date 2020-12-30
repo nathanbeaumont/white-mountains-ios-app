@@ -16,10 +16,10 @@ struct HomeView: View {
                     Text("Mountain Peaks")
                 }
                 .background(Color.Custom.backgroundGreen)
-            Text("Map")
+            PeakMap()
                 .tabItem {
                     Image(systemName: "map.fill")
-                    Text("Two")
+                    Text("Map")
                 }
         }
     }
