@@ -28,9 +28,8 @@ struct PeakMap: View {
     static private let mapSpan = MKCoordinateSpan(latitudeDelta: 1.25, longitudeDelta: 1.25)
 
     @State private var region = MKCoordinateRegion(center: PeakMap.mapCenter, span: PeakMap.mapSpan)
-    @ObservedObject private var mountainDataSource = MapMountainDataSource()
+    @ObservedObject private var mountainDataSource = MountainDataSource.shared
     
-
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: mountainDataSource.mapAnnotations) { identifier in
             MapAnnotation(coordinate: identifier.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)) {
@@ -38,7 +37,7 @@ struct PeakMap: View {
             }
         }
         .ignoresSafeArea()
-        .onAppear(perform: mountainDataSource.loadMountainPeaks)
+        .onAppear(perform: mountainDataSource.generateMapAnnotations)
     }
 }
 

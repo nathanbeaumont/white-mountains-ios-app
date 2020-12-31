@@ -8,7 +8,11 @@
 import Combine
 import SwiftUI
 
-class MountainDataSource: ObservableObject {
+final class MountainDataSource: ObservableObject {
+
+    static let shared = MountainDataSource()
+
+    private init() {}
 
     // Need to add this as, there is currenlty a bug with ObservalbeObject
     let objectWillChange = ObservableObjectPublisher()
@@ -45,21 +49,16 @@ class MountainDataSource: ObservableObject {
             self.mountainPeaksHiked = peaks
         }
     }
-}
 
-class MapMountainDataSource: MountainDataSource {
-    private var _mapAnnotations = [MountainPeakAnnotation]()
+    //MARK:  Map MountainDataSource Support
+    @Published var mapAnnotations = [MountainPeakAnnotation]()
 
-    var mapAnnotations: [MountainPeakAnnotation] {
-        if _mapAnnotations.isEmpty {
-            _mapAnnotations = mountainPeaks.map { peak -> MountainPeakAnnotation in
-                return MountainPeakAnnotation(name: peak.name,
-                                              latitude: peak.latitude,
-                                              longitude: peak.longitude,
-                                              peakHiked: mountainPeaksHiked.peakHiked(peak.id))
-            }
+    func generateMapAnnotations() {
+        mapAnnotations = mountainPeaks.map { peak -> MountainPeakAnnotation in
+            return MountainPeakAnnotation(name: peak.name,
+                                          latitude: peak.latitude,
+                                          longitude: peak.longitude,
+                                          peakHiked: mountainPeaksHiked.peakHiked(peak.id))
         }
-
-        return _mapAnnotations
     }
 }

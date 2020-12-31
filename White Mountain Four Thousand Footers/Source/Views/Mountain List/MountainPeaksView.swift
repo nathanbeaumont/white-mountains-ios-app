@@ -16,7 +16,7 @@ struct MountainPeaksView: View {
         UITableViewCell.appearance().backgroundColor = UIColor.clear
     }
 
-    @ObservedObject fileprivate var mountainDataSource = MountainDataSource()
+    @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
     let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.MountainPeakBagged)
 
     var body: some View {
