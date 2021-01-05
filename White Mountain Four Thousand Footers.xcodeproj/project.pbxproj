@@ -31,6 +31,7 @@
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
 		F2CDCDFC25560250000269EE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFB25560250000269EE /* Font.swift */; };
 		F2CDCE00255602CC000269EE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFF255602CC000269EE /* Color.swift */; };
+		F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1A2ED25A3E0B40027162F /* WebInfoView.swift */; };
 		F2D23AC825618C2F0074A7C3 /* RegisterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */; };
 		F2D23ACB25618D990074A7C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACA25618D990074A7C3 /* String.swift */; };
 		F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */; };
@@ -72,6 +73,7 @@
 		F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MountainPeak+Fixture.swift"; sourceTree = "<group>"; };
 		F2CDCDFB25560250000269EE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		F2CDCDFF255602CC000269EE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F2D1A2ED25A3E0B40027162F /* WebInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebInfoView.swift; sourceTree = "<group>"; };
 		F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfo.swift; sourceTree = "<group>"; };
 		F2D23ACA25618D990074A7C3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTextField.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				F2ABCB4D2564C5920073EE2E /* NavigationBackButton.swift */,
 				F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */,
+				F2D1A2ED25A3E0B40027162F /* WebInfoView.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */,
 				F2D23AD7256222820074A7C3 /* ViewRouter.swift in Sources */,
+				F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */,
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,

@@ -29,7 +29,7 @@ struct PeakMap: View {
 
     @State private var region = MKCoordinateRegion(center: PeakMap.mapCenter, span: PeakMap.mapSpan)
     @ObservedObject private var mountainDataSource = MountainDataSource.shared
-    
+
     var body: some View {
         Map(coordinateRegion: $region, annotationItems: mountainDataSource.mapAnnotations) { identifier in
             MapAnnotation(coordinate: identifier.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.5)) {

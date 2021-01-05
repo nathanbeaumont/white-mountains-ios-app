@@ -10,15 +10,25 @@ import SwiftUI
 struct MountainPeakCell: View {
 
     let mountainPeak: MountainPeak
-    @State var peakHiked: Bool
+    @State private(set) var peakHiked: Bool
+    @State private var isPresented = false
 
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(mountainPeak.name)
-                    .font(Font.avenirMedium(withSize: 25.0))
-                    .fontWeight(.bold)
-                    .lineLimit(2)
+                HStack {
+                    Text(mountainPeak.name)
+                        .font(Font.avenirMedium(withSize: 25.0))
+                        .fontWeight(.bold)
+                        .lineLimit(2)
+                    if !mountainPeak.urls.isEmpty {
+                        Button(action: { self.isPresented.toggle() }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                }
+
                 Text("Elevation: \(mountainPeak.elevation) ft")
                     .font(Font.avenirMedium(withSize: 14.0))
                 Text("Ascent: \(mountainPeak.ascent) ft")
@@ -53,6 +63,9 @@ struct MountainPeakCell: View {
         .background(Color.white)
         .listRowBackground(Color.white)
         .cornerRadius(10.0)
+        .sheet(isPresented: $isPresented) {
+            WebView(url: mountainPeak.urls.first!)
+        }
     }
 }
 

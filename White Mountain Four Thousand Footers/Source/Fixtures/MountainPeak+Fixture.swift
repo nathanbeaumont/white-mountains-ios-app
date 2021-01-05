@@ -15,7 +15,8 @@ extension MountainPeak {
                                 id: 1,
                                 latitude: 44.2705408,
                                 longitude: -71.3034539,
-                                name: "Washington")
+                                name: "Washington",
+                                infoUrls: "https://www.alltrails.com/trail/us/new-hampshire/tuckerman-ravine-trail-to-mount-washington")
         }
     }
 }
