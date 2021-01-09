@@ -15,11 +15,15 @@ struct HomeView: View {
                     Image(systemName: "list.dash")
                     Text("Mountain Peaks")
                 }
-                .background(Color.Custom.backgroundGreen)
             PeakMap()
                 .tabItem {
                     Image(systemName: "map.fill")
                     Text("Map")
+                }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("Profile")
                 }
         }
     }

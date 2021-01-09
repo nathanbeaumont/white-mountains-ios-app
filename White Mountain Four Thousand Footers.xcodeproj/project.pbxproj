@@ -26,6 +26,9 @@
 		F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCC9925661DEC0073EE2E /* SignInView.swift */; };
 		F2ABCC9D25661EEC0073EE2E /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */; };
 		F2ACF8E7258EACE500493569 /* PeakMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACF8E6258EACE500493569 /* PeakMap.swift */; };
+		F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07325AA1BA4002319B7 /* SettingsView.swift */; };
+		F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07725AA1DA6002319B7 /* AppConstants.swift */; };
+		F2B4A07C25AA224C002319B7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07B25AA224C002319B7 /* ProgressView.swift */; };
 		F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */; };
 		F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF42555F166000269EE /* MountainPeakCell.swift */; };
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
@@ -68,6 +71,9 @@
 		F2ABCC9925661DEC0073EE2E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
 		F2ACF8E6258EACE500493569 /* PeakMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakMap.swift; sourceTree = "<group>"; };
+		F2B4A07325AA1BA4002319B7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F2B4A07725AA1DA6002319B7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F2B4A07B25AA224C002319B7 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainDataSource.swift; sourceTree = "<group>"; };
 		F2CDCDF42555F166000269EE /* MountainPeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeakCell.swift; sourceTree = "<group>"; };
 		F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MountainPeak+Fixture.swift"; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F44BAA254F9A14002847B1 /* API */,
+				F2B4A07625AA1D92002319B7 /* Constants */,
 				F2C4EEAA259D12F2003ECE0A /* DataSource */,
 				F2CDCDFE25560259000269EE /* Extensions */,
 				F2CDCDF72555F54E000269EE /* Fixtures */,
@@ -226,6 +233,23 @@
 				F2ACF8E6258EACE500493569 /* PeakMap.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		F2B4A06E25AA1B66002319B7 /* Progress and Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F2B4A07B25AA224C002319B7 /* ProgressView.swift */,
+				F2B4A07325AA1BA4002319B7 /* SettingsView.swift */,
+			);
+			path = "Progress and Settings";
+			sourceTree = "<group>";
+		};
+		F2B4A07625AA1D92002319B7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F2B4A07725AA1DA6002319B7 /* AppConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		F2C4EEAA259D12F2003ECE0A /* DataSource */ = {
@@ -279,6 +303,7 @@
 		F2F44BB4254FA317002847B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F2B4A06E25AA1B66002319B7 /* Progress and Settings */,
 				F2ACF8E5258EACC800493569 /* Map */,
 				F25CF5E52572A70200DED153 /* Mountain List */,
 				F2D23AD6256222820074A7C3 /* ViewRouter.swift */,
@@ -403,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */,
+				F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */,
 				F2770CE42569D37900B2943E /* AppSession.swift in Sources */,
 				F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */,
 				F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */,
@@ -423,6 +449,7 @@
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
+				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
 				F2770CE02569D1B200B2943E /* UserToken.swift in Sources */,
@@ -432,6 +459,7 @@
 				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,
 				F2ABCB4E2564C5920073EE2E /* NavigationBackButton.swift in Sources */,
 				F2D23AC825618C2F0074A7C3 /* RegisterInfo.swift in Sources */,
+				F2B4A07C25AA224C002319B7 /* ProgressView.swift in Sources */,
 				F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */,
 				F2534215256B152B00F78E79 /* APIError.swift in Sources */,
 			);
