@@ -58,7 +58,8 @@ final class MountainDataSource: ObservableObject {
             return MountainPeakAnnotation(name: peak.name,
                                           latitude: peak.latitude,
                                           longitude: peak.longitude,
-                                          peakHiked: mountainPeaksHiked.peakHiked(peak.id))
+                                          peakHiked: mountainPeaksHiked.peakHiked(peak.id),
+                                          infoUrl: peak.urls.first)
         }
     }
 }

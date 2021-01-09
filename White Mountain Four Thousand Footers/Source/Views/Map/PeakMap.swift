@@ -15,6 +15,7 @@ struct MountainPeakAnnotation: Identifiable {
     let latitude: Double
     let longitude: Double
     let peakHiked: Bool
+    let infoUrl: URL?
 
     var coordinate: CLLocationCoordinate2D {
       CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -44,6 +45,7 @@ struct PeakMap: View {
 struct MountainAnnotation: View {
 
     @State private var isSelected: Bool = false
+    @State private var isPresented = false
 
     var mountainPeakframe = CGSize(width: 28, height: 17)
     var mountainPeakHikedframe = CGSize(width: 28, height: 32)
@@ -59,20 +61,37 @@ struct MountainAnnotation: View {
 
             VStack {
                 if isSelected {
-                    Text(mountainPeak.name)
-                        .foregroundColor(.white)
-                        .font(Font.avenirMedium(withSize: 15.0))
-                        .padding()
-                        .background(Color.Custom.backgroundGreen)
-                        .clipShape(Capsule())
-                        .fixedSize(horizontal: true, vertical: false)
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    HStack {
+                        Text(mountainPeak.name)
+                            .foregroundColor(.white)
+                            .font(Font.avenirMedium(withSize: 15.0))
+                            .padding()
+                        if mountainPeak.infoUrl != nil {
+                            Button(action: {
+                                    self.isPresented.toggle()
+                                print("Hellloooo from the Mountains")
+
+                            }, label: {
+                                Image(systemName: "info.circle")
+                                    .padding()
+                            })
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                    }
+                    .background(Color.Custom.backgroundGreen)
+                    .clipShape(Capsule())
+                    .fixedSize(horizontal: true, vertical: false)
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+
                     Spacer(minLength: 80)
                 }
             }
         }
         .onTapGesture {
             isSelected = !isSelected
+        }
+        .sheet(isPresented: $isPresented) {
+            WebView(url: mountainPeak.infoUrl!)
         }
     }
 }
