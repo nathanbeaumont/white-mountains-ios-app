@@ -13,6 +13,8 @@
 		F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E2E257313D4008923E4 /* MountainBag.swift */; };
 		F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E3225731A54008923E4 /* RequestInterceptor.swift */; };
 		F21E4843257D3BE1007A321D /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E4842257D3BE1007A321D /* NotificationName.swift */; };
+		F23CAF5825AB751F00D6E3B9 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CAF5725AB751F00D6E3B9 /* SettingsCell.swift */; };
+		F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CAF5B25AB755800D6E3B9 /* LogoutCell.swift */; };
 		F2534215256B152B00F78E79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2534214256B152B00F78E79 /* APIError.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
 		F2770CE02569D1B200B2943E /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CDF2569D1B200B2943E /* UserToken.swift */; };
@@ -56,6 +58,8 @@
 		F2163E2E257313D4008923E4 /* MountainBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainBag.swift; sourceTree = "<group>"; };
 		F2163E3225731A54008923E4 /* RequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInterceptor.swift; sourceTree = "<group>"; };
 		F21E4842257D3BE1007A321D /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		F23CAF5725AB751F00D6E3B9 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		F23CAF5B25AB755800D6E3B9 /* LogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCell.swift; sourceTree = "<group>"; };
 		F2534214256B152B00F78E79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
 		F2770CDF2569D1B200B2943E /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 				F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */,
 			);
 			path = "Login Flow";
+			sourceTree = "<group>";
+		};
+		F23CAF5625AB74FA00D6E3B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F23CAF5725AB751F00D6E3B9 /* SettingsCell.swift */,
+				F23CAF5B25AB755800D6E3B9 /* LogoutCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F25CF5E52572A70200DED153 /* Mountain List */ = {
@@ -238,6 +251,7 @@
 		F2B4A06E25AA1B66002319B7 /* Progress and Settings */ = {
 			isa = PBXGroup;
 			children = (
+				F23CAF5625AB74FA00D6E3B9 /* Cells */,
 				F2B4A07B25AA224C002319B7 /* ProgressView.swift */,
 				F2B4A07325AA1BA4002319B7 /* SettingsView.swift */,
 			);
@@ -429,6 +443,7 @@
 			files = (
 				F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */,
 				F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */,
+				F23CAF5825AB751F00D6E3B9 /* SettingsCell.swift in Sources */,
 				F2770CE42569D37900B2943E /* AppSession.swift in Sources */,
 				F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */,
 				F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */,
@@ -449,6 +464,7 @@
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
+				F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */,
 				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,

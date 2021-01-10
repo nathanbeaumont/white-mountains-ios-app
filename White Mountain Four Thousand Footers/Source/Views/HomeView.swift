@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+
     var body: some View {
         TabView {
             MountainPeaksView()
@@ -21,6 +23,7 @@ struct HomeView: View {
                     Text("Map")
                 }
             SettingsView()
+                .environmentObject(viewRouter)
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
                     Text("Profile")

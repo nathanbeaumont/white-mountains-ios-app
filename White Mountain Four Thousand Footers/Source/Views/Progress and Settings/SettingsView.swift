@@ -7,21 +7,10 @@
 
 import SwiftUI
 
-struct SettingsCell: View {
-    var title: String
-    var action: (() -> Void)?
-
-    var body: some View {
-        VStack {
-            Text(title)
-                .font(Font.avenirMedium(withSize: 17.0))
-        }
-    }
-}
-
 struct SettingsView: View {
 
     @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
+    @EnvironmentObject var viewRouter: ViewRouter
     @State var progress: Float = 0.0
     @State var progressText: String = ""
 
@@ -31,8 +20,11 @@ struct SettingsView: View {
             List {
                 SettingsCell(title: "Change Password", action: nil)
                 SettingsCell(title: "Delete Account", action: nil)
-                SettingsCell(title: "Application Version: \(AppConstants.appVersion)", action: nil)
+                LogoutCell().environmentObject(viewRouter)
             }
+
+            Text("Application Version: \(AppConstants.appVersion)")
+                .font(Font.avenirHeavy(withSize: 17.0))
         }.onAppear(perform: {
             mountainDataSource.getPeaksBagged()
             updateProgress()

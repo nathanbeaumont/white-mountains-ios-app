@@ -15,4 +15,8 @@ final class AppSession {
     public var userAuthenticated: Bool {
         return !(KeyChain.shared.userAccessToken == nil)
     }
+
+    public func removeAuthentication() {
+        KeyChain.shared.userAccessToken = nil
+    }
 }
