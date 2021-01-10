@@ -22,7 +22,6 @@ struct SettingsCell: View {
 struct SettingsView: View {
 
     @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
-    let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.MountainPeakBagged)
     @State var progress: Float = 0.0
     @State var progressText: String = ""
 
@@ -34,13 +33,17 @@ struct SettingsView: View {
                 SettingsCell(title: "Delete Account", action: nil)
                 SettingsCell(title: "Application Version: \(AppConstants.appVersion)", action: nil)
             }
-        }.onAppear(perform: updateProgress)
-        .onReceive(publisher, perform: { _ in updateProgress() })
+        }.onAppear(perform: {
+            mountainDataSource.getPeaksBagged()
+            updateProgress()
+        })
     }
 
     private func updateProgress() {
-        progress = 1 - Float((mountainDataSource.mountainPeaks.count - mountainDataSource.mountainPeaksHiked.count)) / Float(mountainDataSource.mountainPeaks.count)
-        progressText = "You've hiked \(mountainDataSource.mountainPeaksHiked.count) out of 48 peaks!"
+        let _ = mountainDataSource.$mountainPeaksHiked.sink { mountainPeaksHiked in
+            progress = 1 - Float((mountainDataSource.mountainPeaks.count - mountainPeaksHiked.count)) / Float(mountainDataSource.mountainPeaks.count)
+            progressText = "You've hiked \(mountainPeaksHiked.count) out of 48 peaks!"
+        }
     }
 }
 

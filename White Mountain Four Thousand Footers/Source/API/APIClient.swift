@@ -18,7 +18,7 @@ final class APIClient {
 
     lazy var sessionManager: Session = {
         let configuration = URLSessionConfiguration.af.default
-        configuration.timeoutIntervalForRequest = 30
+        configuration.timeoutIntervalForRequest = 15
         return Session(configuration: configuration,
                        interceptor: RequestInterceptor())
     }()
