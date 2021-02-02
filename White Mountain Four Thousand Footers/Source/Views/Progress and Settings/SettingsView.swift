@@ -19,7 +19,7 @@ struct SettingsView: View {
             ProgressView(progressValue: $progress, progressText: $progressText)
             List {
                 SettingsCell(title: "Change Password", action: nil)
-                SettingsCell(title: "Delete Account", action: nil)
+                DeleteCell().environmentObject(viewRouter)
                 LogoutCell().environmentObject(viewRouter)
             }
 

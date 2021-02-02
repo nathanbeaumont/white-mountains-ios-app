@@ -41,7 +41,7 @@ final class APIClient {
                 switch response.result {
                     case .success:
                         guard let data = response.data else {
-                            failure?(NSError(domain: url.path, code: response.response?.statusCode ?? 200,
+                            failure?(NSError(domain: url.path, code: response.response?.statusCode ?? 999,
                                              userInfo: ["errorDescription": "Response data unable to convert to iOS domain"]), response)
                             return
                         }
@@ -50,7 +50,12 @@ final class APIClient {
                             let model = try JSONDecoder().decode(apiRequest.modelClass, from: data)
                             success(model)
                         } catch {
-                            failure?(NSError(domain: url.path, code: response.response?.statusCode ?? 200,
+                            if response.response?.statusCode  == 200 {
+                                success(APIError(error: "API success, Empty 200 response.") as! APIModel)
+                                return
+                            }
+
+                            failure?(NSError(domain: url.path, code: response.response?.statusCode ?? 999,
                                              userInfo: ["errorDescription": "Could not convert to model object"]), response)
                         }
 
