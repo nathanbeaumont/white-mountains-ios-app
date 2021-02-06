@@ -317,13 +317,13 @@
 		F2F44BB4254FA317002847B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F2B4A06E25AA1B66002319B7 /* Progress and Settings */,
+				F20EA06D25574E8E0048F982 /* Login Flow */,
 				F2ACF8E5258EACC800493569 /* Map */,
 				F25CF5E52572A70200DED153 /* Mountain List */,
-				F2D23AD6256222820074A7C3 /* ViewRouter.swift */,
+				F2B4A06E25AA1B66002319B7 /* Progress and Settings */,
 				F2D23ACD25619E160074A7C3 /* Reusable Views */,
-				F20EA06D25574E8E0048F982 /* Login Flow */,
 				F279981F254BA53C003AD7EB /* HomeView.swift */,
+				F2D23AD6256222820074A7C3 /* ViewRouter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

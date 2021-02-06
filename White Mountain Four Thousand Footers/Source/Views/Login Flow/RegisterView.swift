@@ -117,11 +117,10 @@ private struct RegisterTextFields: View {
                                           text: parentReigstrationView.$repeatPassword)
             Divider()
         }
-        .frame(minWidth: 350)
-        .fixedSize()
         .padding([.leading, .trailing], 15)
         .padding([.top], 25)
         .padding([.bottom], 10)
+        .frame(width: UIScreen.main.bounds.width - 32)
         .background(Color.white)
         .cornerRadius(25.0)
     }
