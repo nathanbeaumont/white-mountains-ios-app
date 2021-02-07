@@ -13,12 +13,15 @@ struct ForgotPasswordScreen: View {
     @State private var showingErrorAlert = false
     @State private var showingSuccessAlert = false
 
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         ZStack {
             Image("Snowy_Lookout")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
+
             VStack(spacing: 8.0) {
                 Text("Forgot your password?")
                     .foregroundColor(.white)
@@ -39,7 +42,11 @@ struct ForgotPasswordScreen: View {
                     .alert(isPresented: $showingSuccessAlert, content: {
                         Alert(title: Text("Success!"),
                               message: Text("A reset password email has been sent to your inbox."),
-                              dismissButton: .default(Text("Okay")))
+                              dismissButton: Alert.Button.default(
+                                Text("Okay"), action: {
+                                    presentationMode.wrappedValue.dismiss()
+                                }
+                            ))
                     })
                 
                 Spacer()
@@ -66,7 +73,6 @@ struct ForgotPasswordScreen: View {
             }
             .padding(.top, 16.0)
             .frame(width: UIScreen.main.bounds.width - 32.0)
-
         }
     }
 
@@ -79,7 +85,9 @@ struct ForgotPasswordScreen: View {
         let apiRequest = APIRequestFactory.initiateForgotPassword(emailAddress: emailAddress)
         APIClient.shared.perform(request: apiRequest) { (apiError) in
             showingSuccessAlert = true
+            hideKeyboard()
         } failure: { (error, dataResponse) in
+            hideKeyboard()
             showingErrorAlert = true
         }
 

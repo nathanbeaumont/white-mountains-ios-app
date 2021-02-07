@@ -113,7 +113,7 @@ private struct RegisterTextFields: View {
             Divider()
 
             // Confirm Password Textfield
-            PlaceholderSecureField(placeholder: Text("Enter a password").foregroundColor(.gray),
+            PlaceholderSecureField(placeholder: Text("Re-enter your password").foregroundColor(.gray),
                                           text: parentReigstrationView.$repeatPassword)
             Divider()
         }

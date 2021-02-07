@@ -10,6 +10,7 @@ import SwiftUI
 enum ApplicationState {
     case registration
     case authenticated
+    case changePassword
 }
 
 class ViewRouter: ObservableObject {

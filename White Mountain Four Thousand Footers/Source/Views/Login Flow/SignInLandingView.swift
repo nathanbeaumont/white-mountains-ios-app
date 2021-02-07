@@ -19,12 +19,13 @@ struct SignInLandingView: View {
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    Text("White Mountain\n Four Thousand Footer\nPeak Tracker")
-                        .font(Font.avenirMedium(withSize: 36.0))
+                    Text("The White Mountain\n Four Thousand Footer\nPeak Tracker")
+                        .font(Font.avenirMedium(withSize: 32.0))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .padding(8.0)
                         .background(Color.clear)
+                        .frame(maxWidth: UIScreen.main.bounds.width - 16.0)
                         .cornerRadius(15.0)
                     Spacer()
                     

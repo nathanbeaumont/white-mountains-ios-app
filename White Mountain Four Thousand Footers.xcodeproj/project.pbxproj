@@ -26,6 +26,8 @@
 		F2799820254BA53C003AD7EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981F254BA53C003AD7EB /* HomeView.swift */; };
 		F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799821254BA53E003AD7EB /* Assets.xcassets */; };
 		F2799825254BA53E003AD7EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799824254BA53E003AD7EB /* Preview Assets.xcassets */; };
+		F27F7BBA25D0468D00ED1D90 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7BB925D0468D00ED1D90 /* ChangePassword.swift */; };
+		F27F7BBE25D0482B00ED1D90 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27F7BBD25D0482B00ED1D90 /* ChangePasswordModel.swift */; };
 		F2ABCB4E2564C5920073EE2E /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCB4D2564C5920073EE2E /* NavigationBackButton.swift */; };
 		F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCC9925661DEC0073EE2E /* SignInView.swift */; };
 		F2ABCC9D25661EEC0073EE2E /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */; };
@@ -49,6 +51,7 @@
 		F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAB254F9A22002847B1 /* APIClient.swift */; };
 		F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAE254F9AD8002847B1 /* APIRequest.swift */; };
 		F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */; };
+		F2FD9FA225D0938200252E23 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD9FA125D0938200252E23 /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,8 @@
 		F2799821254BA53E003AD7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2799824254BA53E003AD7EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2799826254BA53E003AD7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F27F7BB925D0468D00ED1D90 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		F27F7BBD25D0482B00ED1D90 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
 		F2ABCB4D2564C5920073EE2E /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
 		F2ABCC9925661DEC0073EE2E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		F2ABCC9C25661EEC0073EE2E /* WelcomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 		F2F44BAB254F9A22002847B1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F2F44BAE254F9AD8002847B1 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFactory.swift; sourceTree = "<group>"; };
+		F2FD9FA125D0938200252E23 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 		F27391CC25CF280200BE5C92 /* Password Reset */ = {
 			isa = PBXGroup;
 			children = (
+				F27F7BB925D0468D00ED1D90 /* ChangePassword.swift */,
 				F27391CD25CF297F00BE5C92 /* ForgotPasswordScreen.swift */,
 			);
 			path = "Password Reset";
@@ -183,6 +190,7 @@
 		F27391D125CF9DD000BE5C92 /* Payload Models */ = {
 			isa = PBXGroup;
 			children = (
+				F27F7BBD25D0482B00ED1D90 /* ChangePasswordModel.swift */,
 				F27391D225CF9DF900BE5C92 /* PasswordReset.swift */,
 			);
 			path = "Payload Models";
@@ -310,6 +318,7 @@
 				F2CDCDFF255602CC000269EE /* Color.swift */,
 				F2D23ACA25618D990074A7C3 /* String.swift */,
 				F21E4842257D3BE1007A321D /* NotificationName.swift */,
+				F2FD9FA125D0938200252E23 /* Global.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -483,11 +492,13 @@
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */,
 				F2D23AD7256222820074A7C3 /* ViewRouter.swift in Sources */,
+				F27F7BBE25D0482B00ED1D90 /* ChangePasswordModel.swift in Sources */,
 				F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */,
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
 				F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */,
+				F2FD9FA225D0938200252E23 /* Global.swift in Sources */,
 				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
 				F27391CE25CF297F00BE5C92 /* ForgotPasswordScreen.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
@@ -495,6 +506,7 @@
 				F2770CE02569D1B200B2943E /* UserToken.swift in Sources */,
 				F21E4843257D3BE1007A321D /* NotificationName.swift in Sources */,
 				F2ABCC9A25661DEC0073EE2E /* SignInView.swift in Sources */,
+				F27F7BBA25D0468D00ED1D90 /* ChangePassword.swift in Sources */,
 				F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */,
 				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,
 				F2ABCB4E2564C5920073EE2E /* NavigationBackButton.swift in Sources */,

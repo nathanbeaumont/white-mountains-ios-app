@@ -35,6 +35,17 @@ struct APIRequestFactory {
         return apirequest
     }
 
+    static func changePassword(_ model: ChangePasswordModel) -> APIRequest<APIError> {
+        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
+                                         path: "users/password_change",
+                                         modelClass: APIError.self)
+        apirequest.parameters = [PasswordReset.CodingKeys.email.stringValue: model.email,
+                                 PasswordReset.CodingKeys.resetToken.stringValue: model.resetToken.uuidString,
+                                 "password": model.newPassword]
+
+        return apirequest
+    }
+
     static func signInUser(userCrudentials: SignInInfo) -> APIRequest<UserToken> {
         var apirequest = APIRequest.init(methodType: HTTPMethod.post,
                                          path: "users/login",
