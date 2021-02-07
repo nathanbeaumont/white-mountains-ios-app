@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ChangePassword: View {
 
-    @State var password: String = ""
-    @State var repeatPassword: String = ""
+    private enum ActiveAlert {
+        case success, failure, passwordValidtion
+    }
+    @State private var activeAlert: ActiveAlert = .success
 
-    @State private var alertTitle: String = ""
-    @State private var alertText: String = ""
-    @State private var showingAlert = false
+    @State fileprivate var password: String = ""
+    @State fileprivate var repeatPassword: String = ""
+
+    @State private var passwordAlertText: String = ""
+    @State private var showingAlertView = false
 
     @EnvironmentObject var viewRouter: ViewRouter
 
@@ -46,15 +50,25 @@ struct ChangePassword: View {
                             .layoutPriority(1)
                     }
                 }
-                .alert(isPresented: $showingAlert, content: {
-                    Alert(title: Text(alertTitle),
-                          message: Text(alertText),
-                          dismissButton: .default(Text("Okay"), action: {
-                            viewRouter.currentState = .registration
-                        }))
-                })
+                .alert(isPresented: $showingAlertView) {
+                    switch activeAlert {
+                    case .success:
+                        return Alert(title: Text("Success"),
+                                     message: Text("Password successfully updated!"),
+                                     dismissButton: .default(Text("Okay"), action: {
+                                        viewRouter.currentState = .registration
+                                     }))
+                    case .failure:
+                        return Alert(title: Text("Error Changing Password"),
+                                     message: Text("User account could not be created. This email may already be in use."),
+                                     dismissButton: .default(Text("Okay")))
+                    case .passwordValidtion:
+                        return Alert(title: Text("Error"),
+                                     message: Text(passwordAlertText),
+                                     dismissButton: .default(Text("Okay")))
+                    }
+                }
             }
-
         }
     }
 
@@ -63,18 +77,17 @@ struct ChangePassword: View {
         let validation = changePassword.validateInformation(repeatedPassword: repeatPassword)
         switch validation {
             case .passwordComplexity, .passwordsDoNotMatch:
-                alertText = validation.rawValue
-                showingAlert = true
+                passwordAlertText = validation.rawValue
+                activeAlert = .passwordValidtion
+                showingAlertView = true
             case .valid:
                 let changePassword = APIRequestFactory.changePassword(changePassword)
                 APIClient.shared.perform(request: changePassword) { _ in
-                    alertTitle = "Success"
-                    alertText = "Password successfully updated!"
-                    showingAlert = true
+                    activeAlert = .success
+                    showingAlertView = true
                 } failure: { error, response in
-                    alertTitle = "Error Changing Password"
-                    alertText = "User account could not be created. This email may already be in use."
-                    showingAlert = true
+                    activeAlert = .failure
+                    showingAlertView = true
                 }
             case .nameLength, .emailInvalid:
                 break

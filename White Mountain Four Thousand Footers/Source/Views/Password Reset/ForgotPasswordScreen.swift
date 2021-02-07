@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ForgotPasswordScreen: View {
 
-    @State var emailAddress: String = ""
+    let titleText: String
+
+    @State private(set) var emailAddress: String = ""
     @State private var showingErrorAlert = false
     @State private var showingSuccessAlert = false
 
@@ -23,7 +25,7 @@ struct ForgotPasswordScreen: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 8.0) {
-                Text("Forgot your password?")
+                Text(titleText)
                     .foregroundColor(.white)
                     .font(Font.avenirMedium(withSize: 24.0))
                 Text("Enter your email associated with your account. If the email is in our database a reset password email will arrive in your inbox. Please be sure to check your spam.")
@@ -96,6 +98,6 @@ struct ForgotPasswordScreen: View {
 
 struct ForgotPasswordScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPasswordScreen()
+        ForgotPasswordScreen(titleText: "Forgot your password?")
     }
 }

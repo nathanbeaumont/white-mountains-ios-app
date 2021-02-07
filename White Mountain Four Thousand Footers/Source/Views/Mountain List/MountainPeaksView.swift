@@ -23,8 +23,9 @@ struct MountainPeaksView: View {
         ZStack {
             GeometryReader { geometry in
                 Image("Trail_Path")
-                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
 
                 VStack(alignment: .center, spacing: 15.0) {
                     ListFilterView(mountainDataSource: mountainDataSource)

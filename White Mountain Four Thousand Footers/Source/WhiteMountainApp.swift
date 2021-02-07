@@ -11,6 +11,7 @@ import SwiftUI
 struct WhiteMountainApp: App {
 
     @StateObject var viewRouter = ViewRouter()
+    @State private var showingAlert = false
 
     var body: some Scene {
         WindowGroup {
@@ -20,14 +21,21 @@ struct WhiteMountainApp: App {
                         SignInLandingView()
                             .preferredColorScheme(.light)
                             .environmentObject(viewRouter)
+                            .alert(isPresented: $showingAlert, content: {
+                                Alert(title: Text("Expired Link"),
+                                      message: Text("Sorry, that password reset link has expired. Please request a new one."),
+                                      dismissButton: .default(Text("Okay")))
+                            })
                     case .authenticated:
                         HomeView()
                             .environmentObject(viewRouter)
                     case .changePassword:
                         ChangePassword()
                             .environmentObject(viewRouter)
+
                 }
-            }.onOpenURL(perform: { url in
+            }
+            .onOpenURL(perform: { url in
                 if let scheme = url.scheme,
                         scheme.localizedCaseInsensitiveCompare("com.White-Mountain-Four-Thousand-Footers") == .orderedSame,
                         let _ = url.host {
@@ -38,9 +46,12 @@ struct WhiteMountainApp: App {
 
                         if PasswordReset.validation(params: parameters) {
                             viewRouter.currentState = .changePassword
+                        } else {
+                            showingAlert = true
                         }
                     }
             })
+            
         }
     }
 }

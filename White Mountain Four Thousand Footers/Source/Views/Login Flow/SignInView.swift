@@ -36,7 +36,7 @@ struct SignInView: View {
                         .fixedSize()
                 }
                 .sheet(isPresented: $isShowingForgotPassword) {
-                    ForgotPasswordScreen()
+                    ForgotPasswordScreen(titleText: "Forgot your password?")
                 }
 
                 Spacer()
