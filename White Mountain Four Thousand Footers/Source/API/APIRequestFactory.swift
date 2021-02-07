@@ -23,6 +23,18 @@ struct APIRequestFactory {
         return apirequest
     }
 
+    static func initiateForgotPassword(emailAddress: String) -> APIRequest<APIError> {
+        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
+                                         path: "users/password_reset",
+                                         modelClass: APIError.self)
+        let passwordReset = PasswordReset(emailAddress: emailAddress)
+        KeyChain.shared.mostRecentPasswordResetToken = passwordReset
+        apirequest.parameters = [PasswordReset.CodingKeys.email.stringValue: passwordReset.email,
+                                 PasswordReset.CodingKeys.resetToken.stringValue: passwordReset.resetToken.uuidString]
+
+        return apirequest
+    }
+
     static func signInUser(userCrudentials: SignInInfo) -> APIRequest<UserToken> {
         var apirequest = APIRequest.init(methodType: HTTPMethod.post,
                                          path: "users/login",

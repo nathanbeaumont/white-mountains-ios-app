@@ -13,7 +13,7 @@ final class KeyChain {
 
     let keyChain: KeychainAccess.Keychain = Keychain(service: "com.nathan-beaumont.White-Mountain-Four-Thousand-Footers")
 
-    let UserAccessTokenKey = "UserAccessTokenKey"
+    private let UserAccessTokenKey = "UserAccessTokenKey"
     private var _userAccessToken: String?
     var userAccessToken: String? {
         get {
@@ -26,6 +26,25 @@ final class KeyChain {
         set {
             _userAccessToken = newValue
             keyChain[UserAccessTokenKey] = newValue
+        }
+    }
+
+    private let PasswordResetKey = "PasswordResetKey"
+    var mostRecentPasswordResetToken: PasswordReset? {
+        get {
+            let decoder = JSONDecoder()
+            if let data = try? keyChain.getData(PasswordResetKey),
+               let passwordReset = try? decoder.decode(PasswordReset.self, from: data) {
+                return passwordReset
+            }
+
+            return nil
+        }
+        set {
+            let encoder = JSONEncoder()
+            if let data = try? encoder.encode(newValue) {
+                try? keyChain.set(data, key: PasswordResetKey)
+            }
         }
     }
 }

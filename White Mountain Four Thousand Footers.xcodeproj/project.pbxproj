@@ -17,6 +17,8 @@
 		F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CAF5B25AB755800D6E3B9 /* LogoutCell.swift */; };
 		F2534215256B152B00F78E79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2534214256B152B00F78E79 /* APIError.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
+		F27391CE25CF297F00BE5C92 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27391CD25CF297F00BE5C92 /* ForgotPasswordScreen.swift */; };
+		F27391D325CF9DF900BE5C92 /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27391D225CF9DF900BE5C92 /* PasswordReset.swift */; };
 		F2770CE02569D1B200B2943E /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CDF2569D1B200B2943E /* UserToken.swift */; };
 		F2770CE42569D37900B2943E /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CE32569D37900B2943E /* AppSession.swift */; };
 		F2770CF02569D4C600B2943E /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CEF2569D4C600B2943E /* KeyChain.swift */; };
@@ -62,6 +64,8 @@
 		F23CAF5B25AB755800D6E3B9 /* LogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCell.swift; sourceTree = "<group>"; };
 		F2534214256B152B00F78E79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
+		F27391CD25CF297F00BE5C92 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
+		F27391D225CF9DF900BE5C92 /* PasswordReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
 		F2770CDF2569D1B200B2943E /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 		F2770CE32569D37900B2943E /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		F2770CEF2569D4C600B2943E /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		F268817F2554EF64009F6E9B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F27391D125CF9DD000BE5C92 /* Payload Models */,
 				F2534214256B152B00F78E79 /* APIError.swift */,
 				F2163E2E257313D4008923E4 /* MountainBag.swift */,
 				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
@@ -165,6 +170,22 @@
 				F2770CDF2569D1B200B2943E /* UserToken.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F27391CC25CF280200BE5C92 /* Password Reset */ = {
+			isa = PBXGroup;
+			children = (
+				F27391CD25CF297F00BE5C92 /* ForgotPasswordScreen.swift */,
+			);
+			path = "Password Reset";
+			sourceTree = "<group>";
+		};
+		F27391D125CF9DD000BE5C92 /* Payload Models */ = {
+			isa = PBXGroup;
+			children = (
+				F27391D225CF9DF900BE5C92 /* PasswordReset.swift */,
+			);
+			path = "Payload Models";
 			sourceTree = "<group>";
 		};
 		F2770CE22569D32900B2943E /* Singletons */ = {
@@ -320,6 +341,7 @@
 				F20EA06D25574E8E0048F982 /* Login Flow */,
 				F2ACF8E5258EACC800493569 /* Map */,
 				F25CF5E52572A70200DED153 /* Mountain List */,
+				F27391CC25CF280200BE5C92 /* Password Reset */,
 				F2B4A06E25AA1B66002319B7 /* Progress and Settings */,
 				F2D23ACD25619E160074A7C3 /* Reusable Views */,
 				F279981F254BA53C003AD7EB /* HomeView.swift */,
@@ -443,6 +465,7 @@
 			files = (
 				F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */,
 				F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */,
+				F27391D325CF9DF900BE5C92 /* PasswordReset.swift in Sources */,
 				F23CAF5825AB751F00D6E3B9 /* SettingsCell.swift in Sources */,
 				F2770CE42569D37900B2943E /* AppSession.swift in Sources */,
 				F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */,
@@ -466,6 +489,7 @@
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
 				F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */,
 				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
+				F27391CE25CF297F00BE5C92 /* ForgotPasswordScreen.swift in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
 				F2770CE02569D1B200B2943E /* UserToken.swift in Sources */,

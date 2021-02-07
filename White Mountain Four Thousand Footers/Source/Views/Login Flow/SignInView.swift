@@ -15,6 +15,7 @@ struct SignInView: View {
     @State var email: String = ""
     @State var password: String = ""
     @State private var showingAlert = false
+    @State private var isShowingForgotPassword = false
 
     var body: some View {
         ZStack {
@@ -22,10 +23,22 @@ struct SignInView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
+
             VStack {
                 WelcomeHeader(fontSize: 42.0, title: "Welcome Back")
                     .padding(.bottom, 40)
                 SignInTextFields(parentSignInView: self)
+
+                Button(action: forgotPassword) {
+                    Text("Forgot Password?")
+                        .font(Font.avenirMedium(withSize: 21.0))
+                        .foregroundColor(.white)
+                        .fixedSize()
+                }
+                .sheet(isPresented: $isShowingForgotPassword) {
+                    ForgotPasswordScreen()
+                }
+
                 Spacer()
                 Button(action: signIn) {
                     ZStack {
@@ -59,12 +72,16 @@ struct SignInView: View {
         let signInRequest = APIRequestFactory.signInUser(userCrudentials: userInfo)
         APIClient.shared.perform(request: signInRequest) { userToken in
             KeyChain.shared.userAccessToken = userToken.userToken
+            KeyChain.shared.mostRecentPasswordResetToken = nil
             viewRouter.currentState = .authenticated
         } failure: { error, response in
             showingAlert = true
         }
     }
-    
+
+    private func forgotPassword() {
+        isShowingForgotPassword = true
+    }
 }
 
 private struct SignInTextFields: View {
@@ -83,11 +100,11 @@ private struct SignInTextFields: View {
                                    text: parentSignInView.$password)
             Divider()
         }
-        .frame(minWidth: 350)
-        .fixedSize()
         .padding([.leading, .trailing], 15)
         .padding([.top], 25)
         .padding([.bottom], 12)
+        .frame(width: UIScreen.main.bounds.width - 32.0)
+        .fixedSize()
         .background(Color.white)
         .cornerRadius(15.0)
     }

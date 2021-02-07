@@ -1,13 +1,4 @@
 //
-//  APIError.swift
-//  White Mountain Four Thousand Footers
-//
-//  Created by Nathan Beaumont on 11/22/20.
-//
-
-import Foundation
-
-//
 //  MountainPeak.swift
 //  White Mountain Four Thousand Footers
 //
