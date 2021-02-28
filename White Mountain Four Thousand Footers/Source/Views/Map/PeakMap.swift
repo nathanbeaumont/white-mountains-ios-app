@@ -50,29 +50,30 @@ struct MountainAnnotation: View {
     var mountainPeak: MountainPeakAnnotation
 
     var body: some View {
-        ZStack {
-            let imageName = mountainPeak.peakHiked ? "Mountain_Peak_Hiked" : "Mountain_Peak"
-            Image(imageName)
-                .resizable()
-                .frame(width: mountainPeak.peakHiked ? mountainPeakHikedframe.width : mountainPeakframe.width,
-                       height: mountainPeak.peakHiked ? mountainPeakHikedframe.height : mountainPeakframe.height)
+        Button(action: {
+            isSelected = !isSelected
+        }, label: {
+            ZStack {
+                let imageName = mountainPeak.peakHiked ? "Mountain_Peak_Hiked" : "Mountain_Peak"
+                Image(imageName)
+                    .resizable()
+                    .frame(width: mountainPeak.peakHiked ? mountainPeakHikedframe.width : mountainPeakframe.width,
+                           height: mountainPeak.peakHiked ? mountainPeakHikedframe.height : mountainPeakframe.height)
 
-            VStack {
-                if isSelected {
-                    Text(mountainPeak.name)
-                        .foregroundColor(.white)
-                        .font(Font.avenirMedium(withSize: 15.0))
-                        .padding()
-                        .background(Color.Custom.backgroundGreen)
-                        .clipShape(Capsule())
-                        .fixedSize(horizontal: true, vertical: false)
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Spacer(minLength: 80)
+                VStack {
+                    if isSelected {
+                        Text(mountainPeak.name)
+                            .foregroundColor(.white)
+                            .font(Font.avenirMedium(withSize: 15.0))
+                            .padding()
+                            .background(Color.Custom.backgroundGreen)
+                            .clipShape(Capsule())
+                            .fixedSize(horizontal: true, vertical: false)
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        Spacer(minLength: 80)
+                    }
                 }
             }
-        }
-        .onTapGesture {
-            isSelected = !isSelected
-        }
+        })
     }
 }

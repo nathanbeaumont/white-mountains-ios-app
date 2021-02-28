@@ -34,13 +34,27 @@ struct MountainPeakCell: View {
                 Text("Ascent: \(mountainPeak.ascent) ft")
                     .font(Font.avenirMedium(withSize: 14.0))
             }
+
             Spacer()
+            
             if peakHiked {
-                Image(systemName: "checkmark.circle")
-                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(Color.Custom.darkBackgroundGreen)
-                    .font(.system(size: 44))
-                    .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
+                Button(action: {
+                    let apiRequest = APIRequestFactory.removeMountainBag(mountainId: mountainPeak.id)
+                    APIClient.shared.perform(request: apiRequest) { _ in
+                        withAnimation {
+                            peakHiked = false
+                        }
+
+                        NotificationCenter.default.post(Notification(name: Notification.Name.MountainPeakBagged))
+                    }
+                }, label: {
+                    Image(systemName: "checkmark.circle")
+                        .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(Color.Custom.darkBackgroundGreen)
+                        .font(.system(size: 44))
+                        .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
+                })
+                .buttonStyle(PlainButtonStyle())
             } else {
                 Button(action: {
                     let apiRequest = APIRequestFactory.bagMountainPeak(mountainId: mountainPeak.id)

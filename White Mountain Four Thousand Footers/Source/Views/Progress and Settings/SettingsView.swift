@@ -33,6 +33,7 @@ struct SettingsView: View {
 
             Text("Application Version: \(AppConstants.appVersion)")
                 .font(Font.avenirHeavy(withSize: 17.0))
+                .padding(.bottom, 8)
         }.onAppear(perform: {
             mountainDataSource.getPeaksBagged()
             updateProgress()

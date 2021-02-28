@@ -77,6 +77,15 @@ struct APIRequestFactory {
         return apirequest
     }
 
+
+    static func removeMountainBag(mountainId: Int) -> APIRequest<APIError> {
+        var apirequest = APIRequest.init(methodType: HTTPMethod.delete,
+                                         path: "remove_bag",
+                                         modelClass: APIError.self)
+        apirequest.parameters = [MountainBag.CodingKeys.mountainId.stringValue: mountainId]
+        return apirequest
+    }
+
     static func mountainsPeaksBagged() -> APIRequest<[MountainBag]> {
         return APIRequest.init(methodType: HTTPMethod.get,
                                path: "bag",
