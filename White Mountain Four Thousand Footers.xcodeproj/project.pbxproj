@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,8 @@
 		F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07725AA1DA6002319B7 /* AppConstants.swift */; };
 		F2B4A07C25AA224C002319B7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07B25AA224C002319B7 /* ProgressView.swift */; };
 		F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */; };
+		F2CA291E25EC3C010033E945 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */; };
+		F2CA292225EC3E0C0033E945 /* iActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = F2CA292125EC3E0C0033E945 /* iActivityIndicator */; };
 		F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF42555F166000269EE /* MountainPeakCell.swift */; };
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
 		F2CDCDFC25560250000269EE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFB25560250000269EE /* Font.swift */; };
@@ -88,6 +90,7 @@
 		F2B4A07725AA1DA6002319B7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F2B4A07B25AA224C002319B7 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainDataSource.swift; sourceTree = "<group>"; };
+		F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F2CDCDF42555F166000269EE /* MountainPeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeakCell.swift; sourceTree = "<group>"; };
 		F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MountainPeak+Fixture.swift"; sourceTree = "<group>"; };
 		F2CDCDFB25560250000269EE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */,
+				F2CA292225EC3E0C0033E945 /* iActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +333,7 @@
 				F2ABCB4D2564C5920073EE2E /* NavigationBackButton.swift */,
 				F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */,
 				F2D1A2ED25A3E0B40027162F /* WebInfoView.swift */,
+				F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -377,6 +382,9 @@
 			dependencies = (
 			);
 			name = "White Mountain Four Thousand Footers";
+			packageProductDependencies = (
+				F2CA292125EC3E0C0033E945 /* iActivityIndicator */,
+			);
 			productName = "White Mountain Four Thousand Footers";
 			productReference = F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */;
 			productType = "com.apple.product-type.application";
@@ -404,6 +412,9 @@
 				Base,
 			);
 			mainGroup = F2799811254BA53B003AD7EB;
+			packageReferences = (
+				F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */,
+			);
 			productRefGroup = F279981B254BA53C003AD7EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -492,6 +503,7 @@
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */,
 				F2D23AD7256222820074A7C3 /* ViewRouter.swift in Sources */,
+				F2CA291E25EC3C010033E945 /* ActivityIndicator.swift in Sources */,
 				F27F7BBE25D0482B00ED1D90 /* ChangePasswordModel.swift in Sources */,
 				F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */,
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
@@ -704,6 +716,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iActivityIndicator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2CA292125EC3E0C0033E945 /* iActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */;
+			productName = iActivityIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F2799812254BA53C003AD7EB /* Project object */;
 }

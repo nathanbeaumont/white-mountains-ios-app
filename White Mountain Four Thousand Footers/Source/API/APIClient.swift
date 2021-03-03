@@ -15,6 +15,16 @@ final class APIClient {
     }
 
     static let shared = APIClient()
+    private init() {}
+
+    var performingRequest: Bool = false
+    private var activeRequests = [Request]() {
+        didSet {
+            performingRequest = activeRequests.count > 0 ? true : false
+            NotificationCenter.default.post(Notification(name: Notification.Name.APIRequestStatusChange))
+        }
+    }
+
 
     lazy var sessionManager: Session = {
         let configuration = URLSessionConfiguration.af.default
@@ -31,13 +41,17 @@ final class APIClient {
         }
 
         let parameters = (apiRequest.methodType == Alamofire.HTTPMethod.get) ? nil : apiRequest.parameters
-        sessionManager
-            .request(url,
-                     method: apiRequest.methodType,
-                     parameters: parameters,
-                     encoding: JSONEncoding.default)
+        let request = sessionManager.request(url,
+                                             method: apiRequest.methodType,
+                                             parameters: parameters,
+                                             encoding: JSONEncoding.default)
+        activeRequests.append(request)
+
+        request
             .validate()
-            .responseJSON(completionHandler: { response in
+            .responseJSON(completionHandler: { [self] response in
+                self.activeRequests.removeAll { $0 == request }
+
                 switch response.result {
                     case .success:
                         guard let data = response.data else {

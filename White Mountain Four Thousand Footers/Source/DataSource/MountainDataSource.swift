@@ -50,6 +50,12 @@ final class MountainDataSource: ObservableObject {
         }
     }
 
+    func clearDataSource() {
+        self.objectWillChange.send()
+        self.mountainPeaksHiked = []
+        self.mountainPeaks = []
+    }
+
     //MARK:  Map MountainDataSource Support
     @Published var mapAnnotations = [MountainPeakAnnotation]()
 

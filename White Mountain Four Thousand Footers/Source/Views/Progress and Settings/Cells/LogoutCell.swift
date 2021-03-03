@@ -20,6 +20,7 @@ struct LogoutCell: View {
                                 primaryButton:
                                     Alert.Button.destructive(Text("Logout"),
                                 action: {
+                                    MountainDataSource.shared.clearDataSource()
                                     AppSession.shared.removeAuthentication()
                                     viewRouter.currentState = .registration
                                 }),
