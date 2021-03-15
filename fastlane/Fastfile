@@ -1,29 +1,24 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
 
 platform :ios do
   desc "Push a new release build to the App Store"
   lane :release do
-    build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", scheme: "White Mountain Four Thousand Footers")
+  	match(git_basic_authorization: 'bmF0aGFuLmJlYXVtb250OmdocF81bGMzdDFEV2VhZk9nRDZpb0VPZ0xGYXRtZHI2dmgxMHZrVUY=')
+  	match(type: "appstore", readonly: false)
+  	increment_build_number
+    build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", 
+    		  scheme: "White Mountain Four Thousand Footers",
+    		  configuration: "Release",
+    		  clean: true)
     upload_to_app_store(skip_metadata: true, skip_screenshots: true)
   end
 
   desc "Build the application"
   lane :build do
-  	build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", scheme: "White Mountain Four Thousand Footers")
+  	build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", 
+  			  scheme: "White Mountain Four Thousand Footers",
+  		 	  skip_profile_detection: true, 
+  		 	  skip_codesigning: true, 
+  		 	  skip_archive: true)
   end
 end

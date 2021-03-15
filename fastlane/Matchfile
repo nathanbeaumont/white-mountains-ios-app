@@ -1,0 +1,12 @@
+git_url("https://github.com/nathanbeaumont/white-mountains-ios-app-match-cert-storage")
+
+storage_mode("git")
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+# app_identifier(["tools.fastlane.app", "tools.fastlane.app2"])
+username("nathanbeaumont.617@gmail.com") # Your Apple Developer Portal username
+shallow_clone true
+force_for_new_devices true
+ENV["FASTLANE_PASSWORD"] = "qt7EVr!xFvRFmuLXQ79cw" #Password to access git repo.
+ENV["MATCH_PASSWORD"] = "qt7EVr!xFvRFmuLXQ79cw" #Password for the .p12 files saved in git repo.
+ENV["MATCH_KEYCHAIN_PASSWORD"] = "qt7EVr!xFvRFmuLXQ79cw"

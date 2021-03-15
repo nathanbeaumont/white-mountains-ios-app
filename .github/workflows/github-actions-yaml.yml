@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    # Job name is test
+    name: Build
+    runs-on: macOS-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+
+    - name: Bundle Update
+      run: gem install bundler:2.2.14
+    - name: Bundle Install
+      run: bundle install
+
+    - name: setup-cocoapods
+      uses: maxim-lobanov/setup-cocoapods@v1
+      with:
+        version: 1.10.1
+
+    - name: Install Dependencies
+      run: pod install --repo-update
+
+    - uses: maierj/fastlane-action@v2.0.1
+      with:
+        lane: 'build'

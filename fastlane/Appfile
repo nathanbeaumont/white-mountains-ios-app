@@ -3,8 +3,6 @@ apple_id("nathanbeaumont.617@gmail.com") # Your Apple email address
 
 itc_team_id("118938749") # App Store Connect Team ID
 team_id("NLJT9N54Y2") # Developer Portal Team ID
-itc_team_id("118938749") # App Store Connect Team ID
-team_id("NLJT9N54Y2") # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
