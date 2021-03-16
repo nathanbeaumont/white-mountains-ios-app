@@ -46,7 +46,6 @@
 		F2D23AC825618C2F0074A7C3 /* RegisterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AC725618C2F0074A7C3 /* RegisterInfo.swift */; };
 		F2D23ACB25618D990074A7C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACA25618D990074A7C3 /* String.swift */; };
 		F2D23ACF25619E410074A7C3 /* PlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACE25619E410074A7C3 /* PlaceholderTextField.swift */; };
-		F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
 		F2D23AD7256222820074A7C3 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD6256222820074A7C3 /* ViewRouter.swift */; };
 		F2EE0669255CD0F800C304FC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE0668255CD0F800C304FC /* RegisterView.swift */; };
 		F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BA6254F95E9002847B1 /* MountainPeak.swift */; };
@@ -54,6 +53,7 @@
 		F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAE254F9AD8002847B1 /* APIRequest.swift */; };
 		F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */; };
 		F2FD9FA225D0938200252E23 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD9FA125D0938200252E23 /* Global.swift */; };
+		FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -498,7 +498,6 @@
 				F2770CF02569D4C600B2943E /* KeyChain.swift in Sources */,
 				F2CDCDFC25560250000269EE /* Font.swift in Sources */,
 				F2125FA02569840D00764467 /* SignInInfo.swift in Sources */,
-				F2D23AD325619F630074A7C3 /* StatefulPreviewWrapper.swift in Sources */,
 				F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */,
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */,
@@ -509,6 +508,7 @@
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
+				FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */,
 				F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */,
 				F2FD9FA225D0938200252E23 /* Global.swift in Sources */,
 				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
@@ -654,9 +654,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"White Mountain Four Thousand Footers/Source/Preview Content\"";
-				DEVELOPMENT_TEAM = K4MUGL7ULP;
+				DEVELOPMENT_TEAM = NLJT9N54Y2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "White Mountain Four Thousand Footers/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -664,8 +666,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nathan-beaumont.White-Mountain-Four-Thousand-Footers";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathan-beaumont.White-Mountain-Peak-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -677,9 +681,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"White Mountain Four Thousand Footers/Source/Preview Content\"";
-				DEVELOPMENT_TEAM = K4MUGL7ULP;
+				DEVELOPMENT_TEAM = NLJT9N54Y2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "White Mountain Four Thousand Footers/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -687,8 +693,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nathan-beaumont.White-Mountain-Four-Thousand-Footers";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nathan-beaumont.White-Mountain-Peak-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "White Mountains Provisioning Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -11,7 +11,7 @@ import KeychainAccess
 final class KeyChain {
     static let shared = KeyChain()
 
-    let keyChain: KeychainAccess.Keychain = Keychain(service: "com.nathan-beaumont.White-Mountain-Four-Thousand-Footers")
+    let keyChain: KeychainAccess.Keychain = Keychain(service: "com.nathan-beaumont.White-Mountain-Peak-Tracker")
 
     private let UserAccessTokenKey = "UserAccessTokenKey"
     private var _userAccessToken: String?

@@ -44,14 +44,14 @@ struct PlaceholderSecureField: View {
     }
 }
 
-struct PlaceholderTextField_Previews: PreviewProvider {
-
-    @State var text: String
-
-    static var previews: some View {
-        StatefulPreviewWrapper("") {
-            PlaceholderSecureField(placeholder: Text("Nathan")
-                                    .foregroundColor(.red), text: $0)
-        }
-    }
-}
+//struct PlaceholderTextField_Previews: PreviewProvider {
+//
+//    @State var text: String
+//
+//    static var previews: some View {
+//        StatefulPreviewWrapper<String, PlaceholderSecureField>("") {
+//            PlaceholderSecureField(placeholder: Text("Nathan")
+//                                    .foregroundColor(.red), text: $0)
+//        }
+//    }
+//}

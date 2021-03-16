@@ -43,3 +43,11 @@ Pods
 compile_commands.json
 oclint.xml
 report.html
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+White Mountain Four Thousand Footers.app.dSYM.zip
+White Mountain Four Thousand Footers.ipa
