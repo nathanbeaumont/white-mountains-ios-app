@@ -21,4 +21,9 @@ platform :ios do
     build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", scheme: "White Mountain Four Thousand Footers")
     upload_to_app_store(skip_metadata: true, skip_screenshots: true)
   end
+
+  desc "Build the application"
+  lane :build do
+  	build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", scheme: "White Mountain Four Thousand Footers")
+  end
 end
