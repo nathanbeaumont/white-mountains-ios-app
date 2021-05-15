@@ -30,5 +30,12 @@ jobs:
       run: pod install --repo-update
 
     - uses: maierj/fastlane-action@v2.0.1
+      env:
+        MATCH_REPO: ${{ secrets.MATCH_REPO }}
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASS }}
+        SIGNING_ID: ${{ secrets.SIGNING_ID }}
+        APPLE_ACCOUNT: ${{ secrets.APPLE_ACCOUNT }}
+        TEAM_ID: ${{ secrets.TEAM_ID }}
+        MATCH_AUTH_GITHUB: ${{ secrets.MATCH_AUTH_GITHUB }}
       with:
         lane: 'release'

@@ -1,5 +1,5 @@
 app_identifier("com.nathan-beaumont.White-Mountain-Peak-Tracker") # The bundle identifier of your app
-apple_id("nathanbeaumont.617@gmail.com") # Your Apple email address
+apple_id(ENV["APPLE_ACCOUNT"]) # Your Apple email address
 
 itc_team_id("118938749") # App Store Connect Team ID
 team_id("NLJT9N54Y2") # Developer Portal Team ID
