@@ -1,11 +1,7 @@
-name: CI
+name: App Store Release
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+ [workflow_dispatch]
 jobs:
   test:
     # Job name is test
@@ -35,4 +31,4 @@ jobs:
 
     - uses: maierj/fastlane-action@v2.0.1
       with:
-        lane: 'build'
+        lane: 'release'
