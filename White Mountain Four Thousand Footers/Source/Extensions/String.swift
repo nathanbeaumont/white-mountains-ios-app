@@ -16,7 +16,7 @@ extension String {
     }
 
     func isPasswordComplex() -> Bool {
-        let passwordComplexity = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
+        let passwordComplexity = "^(?=.*[0-9]).{8,}$"
 
         let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordComplexity)
         return passwordPred.evaluate(with: self)

@@ -74,6 +74,8 @@ final class APIClient {
                         }
 
                     case .failure(let error):
+                        print("API Request Failed:")
+                        print("\(error)")
                         failure?(error, response)
                 }
             })
