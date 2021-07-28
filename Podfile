@@ -5,7 +5,8 @@ target 'White Mountain Four Thousand Footers' do
   inhibit_all_warnings!
 
   pod 'Alamofire', '5.3.0'
-  pod 'ActivityIndicatorView'
+  pod 'ActivityIndicatorView', '0.0.7'
+  pod 'Firebase/Analytics', '8.4.0'
   pod 'KeychainAccess', '4.2.1'
 
 end

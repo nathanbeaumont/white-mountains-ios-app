@@ -10,6 +10,7 @@ import Combine
 
 @main
 struct WhiteMountainApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     @StateObject var viewRouter = ViewRouter()
     @State private var showingAlert = false

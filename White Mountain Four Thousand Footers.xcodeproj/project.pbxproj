@@ -54,6 +54,8 @@
 		F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */; };
 		F2FD9FA225D0938200252E23 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD9FA125D0938200252E23 /* Global.swift */; };
 		FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
+		FBE42A0C26B0D69A003243CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBE42A0B26B0D69A003243CC /* GoogleService-Info.plist */; };
+		FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		F2F44BAE254F9AD8002847B1 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFactory.swift; sourceTree = "<group>"; };
 		F2FD9FA125D0938200252E23 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		FBE42A0B26B0D69A003243CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				F2770CE22569D32900B2943E /* Singletons */,
 				F2F44BB4254FA317002847B1 /* Views */,
 				F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */,
+				FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		F279982F254BA6BE003AD7EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FBE42A0B26B0D69A003243CC /* GoogleService-Info.plist */,
 				F2799821254BA53E003AD7EB /* Assets.xcassets */,
 				F2799826254BA53E003AD7EB /* Info.plist */,
 			);
@@ -431,6 +437,7 @@
 			files = (
 				F2799825254BA53E003AD7EB /* Preview Assets.xcassets in Resources */,
 				F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */,
+				FBE42A0C26B0D69A003243CC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */,
 				F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */,
 				F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */,
 				F27391D325CF9DF900BE5C92 /* PasswordReset.swift in Sources */,
