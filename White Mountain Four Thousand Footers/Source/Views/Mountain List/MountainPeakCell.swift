@@ -13,6 +13,8 @@ struct MountainPeakCell: View {
     @State private(set) var peakHiked: Bool
     @State private var isPresented = false
 
+    @Environment(\.colorScheme) var currentMode
+
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -74,7 +76,7 @@ struct MountainPeakCell: View {
             }
         }
         .padding(10)
-        .background(Color.white)
+        .background(currentMode == .dark ?  Color.black : Color.white)
         .listRowBackground(Color.white)
         .cornerRadius(10.0)
         .sheet(isPresented: $isPresented) {
@@ -92,5 +94,6 @@ struct MountainPeakCell_Previews: PreviewProvider {
                              peakHiked: false)
         }
         .background(Color.pink)
+        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }

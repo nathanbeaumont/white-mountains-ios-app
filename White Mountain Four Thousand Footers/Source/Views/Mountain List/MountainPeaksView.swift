@@ -30,7 +30,6 @@ struct MountainPeaksView: View {
                 VStack(alignment: .center, spacing: 15.0) {
                     ListFilterView(mountainDataSource: mountainDataSource)
                         .frame(width: geometry.size.width - 32.0, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                        .background(Color.white)
                         .cornerRadius(15.0)
 
                     List(mountainDataSource.mountainPeaks, id: \.id) { peak in
@@ -64,12 +63,18 @@ struct ListFilterView: View {
     @ObservedObject fileprivate var mountainDataSource: MountainDataSource
     @State private var listFilterState: ListFilterView.ListFilterState = .elevationDescending
 
+    //MARK : Environment Properties
+    @Environment(\.colorScheme) var currentMode
+
     // MARK: Computed Properties
     private var elevationButtonSelected: Bool {
         return listFilterState == .elevationAscending || listFilterState == .elevationDescending
     }
     private var alphabeticalButtonSelected: Bool {
         return listFilterState == .alphabeticalAZ || listFilterState == .alphabeticalZA
+    }
+    private var unselectedColor: Color {
+        currentMode == .dark ?  Color.white : Color.black
     }
 
     var body: some View {
@@ -88,7 +93,7 @@ struct ListFilterView: View {
                     }
                     .frame(height: imageHeight)
                 }
-                .accentColor(elevationButtonSelected ? .blue : .black)
+                .accentColor(elevationButtonSelected ? .blue : unselectedColor)
 
                 Button(action: alphabeticalButtonPressed) {
                     VStack {
@@ -100,17 +105,21 @@ struct ListFilterView: View {
                                 .frame(height: imageHeight)
                                 .layoutPriority(1)
                             Circle()
-                                .stroke(alphabeticalButtonSelected ? Color.blue : .black, lineWidth: 3.0)
+                                .stroke(alphabeticalButtonSelected ? Color.blue : unselectedColor, lineWidth: 3.0)
                                 .background(Color.clear)
                         }
                         Text("Alphabetical")
                     }
                 }
-                .accentColor(alphabeticalButtonSelected ? .blue : .black)
+                .accentColor(alphabeticalButtonSelected ? .blue : unselectedColor)
 
                 Spacer()
-            }.padding(15.0)
+            }
+            .padding(15.0)
+            .background(currentMode == .dark ? Color.black : Color.white)
+
         }
+
     }
 
     private func elevationButtonPressed() {
@@ -146,5 +155,6 @@ struct ListFilterView: View {
 struct MountainPeaksView_Previews: PreviewProvider {
     static var previews: some View {
         MountainPeaksView()
+            .preferredColorScheme(.dark)
     }
 }
