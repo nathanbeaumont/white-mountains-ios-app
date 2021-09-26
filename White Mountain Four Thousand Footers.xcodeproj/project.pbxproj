@@ -54,7 +54,7 @@
 		F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */; };
 		F2FD9FA225D0938200252E23 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD9FA125D0938200252E23 /* Global.swift */; };
 		FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
-		FBE42A0C26B0D69A003243CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBE42A0B26B0D69A003243CC /* GoogleService-Info.plist */; };
+		FB97F4F42700EAF100BC1FEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */; };
 		FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +109,7 @@
 		F2F44BAE254F9AD8002847B1 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFactory.swift; sourceTree = "<group>"; };
 		F2FD9FA125D0938200252E23 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		FBE42A0B26B0D69A003243CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,7 +272,7 @@
 		F279982F254BA6BE003AD7EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FBE42A0B26B0D69A003243CC /* GoogleService-Info.plist */,
+				FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */,
 				F2799821254BA53E003AD7EB /* Assets.xcassets */,
 				F2799826254BA53E003AD7EB /* Info.plist */,
 			);
@@ -437,7 +437,7 @@
 			files = (
 				F2799825254BA53E003AD7EB /* Preview Assets.xcassets in Resources */,
 				F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */,
-				FBE42A0C26B0D69A003243CC /* GoogleService-Info.plist in Resources */,
+				FB97F4F42700EAF100BC1FEE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +669,7 @@
 				DEVELOPMENT_TEAM = NLJT9N54Y2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "White Mountain Four Thousand Footers/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -696,7 +696,7 @@
 				DEVELOPMENT_TEAM = NLJT9N54Y2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "White Mountain Four Thousand Footers/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

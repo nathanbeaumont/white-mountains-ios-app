@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct SignInView: View {
 
@@ -74,6 +75,7 @@ struct SignInView: View {
             KeyChain.shared.userAccessToken = userToken.userToken
             KeyChain.shared.mostRecentPasswordResetToken = nil
             viewRouter.currentState = .authenticated
+            Analytics.logEvent("New_App_Launch", parameters: [:])
         } failure: { error, response in
             showingAlert = true
         }

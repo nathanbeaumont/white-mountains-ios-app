@@ -66,6 +66,7 @@ final class APIClient {
                         } catch {
                             if response.response?.statusCode  == 200 {
                                 success(APIError(error: "API success, Empty 200 response.") as! APIModel)
+                                
                                 return
                             }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct MountainPeakCell: View {
 
@@ -61,6 +62,7 @@ struct MountainPeakCell: View {
                 Button(action: {
                     let apiRequest = APIRequestFactory.bagMountainPeak(mountainId: mountainPeak.id)
                     APIClient.shared.perform(request: apiRequest) { _ in
+                        Analytics.logEvent("Peak_Bagged", parameters: ["peak_id": mountainPeak.id])
                         withAnimation {
                             peakHiked = true
                         }

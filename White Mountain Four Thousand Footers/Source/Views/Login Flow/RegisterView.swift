@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct RegisterView: View {
 
@@ -71,6 +72,7 @@ struct RegisterView: View {
                 APIClient.shared.perform(request: createNewUserRequest) { userToken in
                     KeyChain.shared.userAccessToken = userToken.userToken
                     viewRouter.currentState = .authenticated
+                    Analytics.logEvent("New_User_Created", parameters: [:])
 
                     // Set Home Screen
                 } failure: { error, response in
@@ -78,6 +80,7 @@ struct RegisterView: View {
                         // User already exists error
                         alertText = "User account could not be created. This email may already be in use."
                         showingAlert = true
+                        Analytics.logEvent("Error_Creating_New_User", parameters: [:])
                     }
                 }
         }
