@@ -57,8 +57,8 @@ struct APIRequestFactory {
 
     static func deleteUser() -> APIRequest<APIError> {
         return APIRequest.init(methodType: HTTPMethod.delete,
-                                         path: "users/remove",
-                                         modelClass: APIError.self)
+                               path: "users/remove",
+                               modelClass: APIError.self)
     }
 
     // MARK: Mountain Peak Requests
