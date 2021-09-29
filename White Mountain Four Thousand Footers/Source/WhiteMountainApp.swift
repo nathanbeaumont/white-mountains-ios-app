@@ -15,7 +15,8 @@ struct WhiteMountainApp: App {
     @StateObject var viewRouter = ViewRouter()
     @State private var showingAlert = false
 
-    let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.APIRequestStatusChange)
+    let apiRquestStatusChangePublisher = NotificationCenter.default.publisher(for: NSNotification.Name.APIRequestStatusChange)
+    let apiRquestUnauthorizedPublisher = NotificationCenter.default.publisher(for: NSNotification.Name.APIRequestUnauthroizedUser)
     @State private var performingRequest = false
     @State private var timerDelay: Timer?
 
@@ -57,7 +58,7 @@ struct WhiteMountainApp: App {
                             }
                         }
                 })
-                .onReceive(publisher, perform: { _ in
+                .onReceive(apiRquestStatusChangePublisher, perform: { _ in
                     if APIClient.shared.performingRequest {
                         self.timerDelay = Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { _ in
                             self.performingRequest = APIClient.shared.performingRequest
@@ -71,6 +72,12 @@ struct WhiteMountainApp: App {
                         self.timerDelay = nil
                     }
                 })
+                .onReceive(apiRquestUnauthorizedPublisher) { _  in
+                    KeyChain.shared.userAccessToken = nil
+                    MountainDataSource.shared.clearDataSource()
+                    AppSession.shared.removeAuthentication()
+                    viewRouter.currentState = .registration
+                }
 
                  // ZStack Continued
                 if performingRequest && timerDelay == nil {

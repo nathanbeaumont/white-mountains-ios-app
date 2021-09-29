@@ -42,17 +42,14 @@ struct MountainPeakCell: View {
             
             if peakHiked {
                 Button(action: {
-                    let apiRequest = APIRequestFactory.removeMountainBag(mountainId: mountainPeak.id)
-                    APIClient.shared.perform(request: apiRequest) { _ in
+                    MountainDataSource.shared.removePeak(mountainId: mountainPeak.id) {
                         withAnimation {
                             peakHiked = false
                         }
-
-                        NotificationCenter.default.post(Notification(name: Notification.Name.MountainPeakBagged))
                     }
                 }, label: {
                     Image(systemName: "checkmark.circle")
-                        .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
+                        .renderingMode(.template)
                         .foregroundColor(Color.Custom.darkBackgroundGreen)
                         .font(.system(size: 44))
                         .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
@@ -60,14 +57,10 @@ struct MountainPeakCell: View {
                 .buttonStyle(PlainButtonStyle())
             } else {
                 Button(action: {
-                    let apiRequest = APIRequestFactory.bagMountainPeak(mountainId: mountainPeak.id)
-                    APIClient.shared.perform(request: apiRequest) { _ in
-                        Analytics.logEvent("Peak_Bagged", parameters: ["peak_id": mountainPeak.id])
+                    MountainDataSource.shared.bagNewPeak(mountainId: mountainPeak.id) {
                         withAnimation {
                             peakHiked = true
                         }
-
-                        NotificationCenter.default.post(Notification(name: Notification.Name.MountainPeakBagged))
                     }
                 }, label: {
                     Image(systemName: "plus.circle")
@@ -96,6 +89,6 @@ struct MountainPeakCell_Previews: PreviewProvider {
                              peakHiked: false)
         }
         .background(Color.pink)
-        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+        .preferredColorScheme(.dark)
     }
 }

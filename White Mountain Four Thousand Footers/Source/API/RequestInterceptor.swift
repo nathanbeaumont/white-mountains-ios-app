@@ -29,7 +29,10 @@ final class RequestInterceptor: Alamofire.RequestInterceptor {
                dueTo error: Error,
                completion: @escaping (RetryResult) -> Void) {
         if let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401  {
-            KeyChain.shared.userAccessToken = nil
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: Notification.Name.APIRequestUnauthroizedUser, object: nil)
+                completion(.doNotRetry)
+            }
         }
 
         completion(.doNotRetryWithError(error))

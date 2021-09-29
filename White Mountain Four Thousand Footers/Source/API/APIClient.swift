@@ -6,7 +6,9 @@
 //
 
 import Alamofire
+import CoreData
 import Foundation
+import SwiftUI
 
 final class APIClient {
     enum FailureReason: Int, Error {
@@ -20,8 +22,11 @@ final class APIClient {
     var performingRequest: Bool = false
     private var activeRequests = [Request]() {
         didSet {
-            performingRequest = activeRequests.count > 0 ? true : false
-            NotificationCenter.default.post(Notification(name: Notification.Name.APIRequestStatusChange))
+            DispatchQueue.main.async { [weak self] in
+                guard let weakSelf = self else { return }
+                weakSelf.performingRequest = weakSelf.activeRequests.count > 0 ? true : false
+                NotificationCenter.default.post(Notification(name: Notification.Name.APIRequestStatusChange))
+            }
         }
     }
 
@@ -33,7 +38,24 @@ final class APIClient {
                        interceptor: RequestInterceptor())
     }()
 
+    func performBackgroundRequest<APIModel: Codable>(request apiRequest: APIRequest<APIModel>,
+                                                     success: ((APIModel) -> Void)?,
+                                                     failure: ((Error, AFDataResponse<Any>) -> Void)? = nil) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.perform(request: apiRequest, showLoadingIndicator: false) { model in
+                DispatchQueue.main.async {
+                    success?(model)
+                }
+            } failure: { error, response in
+                DispatchQueue.main.async {
+                    failure?(error, response)
+                }
+            }
+        }
+    }
+
     func perform<APIModel: Codable>(request apiRequest: APIRequest<APIModel>,
+                                    showLoadingIndicator: Bool = true,
                                     success: @escaping (APIModel) -> Void,
                                     failure: ((Error, AFDataResponse<Any>) -> Void)? = nil) {
         guard let url = apiRequest.url else {
@@ -45,12 +67,12 @@ final class APIClient {
                                              method: apiRequest.methodType,
                                              parameters: parameters,
                                              encoding: JSONEncoding.default)
-        activeRequests.append(request)
+        if showLoadingIndicator { activeRequests.append(request) }
 
         request
             .validate()
             .responseJSON(completionHandler: { [self] response in
-                self.activeRequests.removeAll { $0 == request }
+                if showLoadingIndicator { self.activeRequests.removeAll { $0 == request } }
 
                 switch response.result {
                     case .success:
@@ -61,7 +83,11 @@ final class APIClient {
                         }
 
                         do {
-                            let model = try JSONDecoder().decode(apiRequest.modelClass, from: data)
+                            let managedObjectContext = PersistenceController.shared.container.viewContext
+                            let decoder = JSONDecoder()
+                            decoder.userInfo[CodingUserInfoKey.managedObjectContext] = managedObjectContext
+
+                            let model = try decoder.decode(apiRequest.modelClass, from: data)
                             success(model)
                         } catch {
                             if response.response?.statusCode  == 200 {
@@ -81,4 +107,18 @@ final class APIClient {
                 }
             })
   }
+}
+
+// MARK: Database Stores
+
+extension APIClient {
+    func saveContext(managedObjectContext: NSManagedObjectContext) {
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print("An error occurred while saving: \(error)")
+            }
+        }
+    }
 }

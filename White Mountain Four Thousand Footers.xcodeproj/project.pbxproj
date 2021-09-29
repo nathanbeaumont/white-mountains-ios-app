@@ -54,7 +54,10 @@
 		F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */; };
 		F2FD9FA225D0938200252E23 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD9FA125D0938200252E23 /* Global.swift */; };
 		FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
+		FB510BBE270533060047355D /* PersistanceCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB510BBD270533060047355D /* PersistanceCordinator.swift */; };
 		FB97F4F42700EAF100BC1FEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */; };
+		FBA92E212704D26000751FAC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBA92E1F2704D26000751FAC /* DataModel.xcdatamodeld */; };
+		FBA92E242704FAFD00751FAC /* DatabaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA92E232704FAFD00751FAC /* DatabaseFetcher.swift */; };
 		FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +112,10 @@
 		F2F44BAE254F9AD8002847B1 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFactory.swift; sourceTree = "<group>"; };
 		F2FD9FA125D0938200252E23 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		FB510BBD270533060047355D /* PersistanceCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceCordinator.swift; sourceTree = "<group>"; };
 		FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBA92E202704D26000751FAC /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		FBA92E232704FAFD00751FAC /* DatabaseFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseFetcher.swift; sourceTree = "<group>"; };
 		FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +242,7 @@
 		F279981C254BA53C003AD7EB /* White Mountain Four Thousand Footers */ = {
 			isa = PBXGroup;
 			children = (
+				FBA92E1E2704D23F00751FAC /* Database */,
 				F279982E254BA6B6003AD7EB /* Source */,
 				F279982F254BA6BE003AD7EB /* Resources */,
 			);
@@ -347,6 +354,7 @@
 		F2F44BAA254F9A14002847B1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				FBA92E222704FAE400751FAC /* Database  */,
 				F2F44BAB254F9A22002847B1 /* APIClient.swift */,
 				F2F44BAE254F9AD8002847B1 /* APIRequest.swift */,
 				F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */,
@@ -368,6 +376,23 @@
 				F2D23AD6256222820074A7C3 /* ViewRouter.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FBA92E1E2704D23F00751FAC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FBA92E1F2704D26000751FAC /* DataModel.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		FBA92E222704FAE400751FAC /* Database  */ = {
+			isa = PBXGroup;
+			children = (
+				FBA92E232704FAFD00751FAC /* DatabaseFetcher.swift */,
+				FB510BBD270533060047355D /* PersistanceCordinator.swift */,
+			);
+			path = "Database ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,12 +540,15 @@
 				F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */,
 				F2163E3325731A54008923E4 /* RequestInterceptor.swift in Sources */,
 				F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */,
+				FB510BBE270533060047355D /* PersistanceCordinator.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
 				FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */,
 				F23CAF5C25AB755800D6E3B9 /* LogoutCell.swift in Sources */,
+				FBA92E242704FAFD00751FAC /* DatabaseFetcher.swift in Sources */,
 				F2FD9FA225D0938200252E23 /* Global.swift in Sources */,
 				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
 				F27391CE25CF297F00BE5C92 /* ForgotPasswordScreen.swift in Sources */,
+				FBA92E212704D26000751FAC /* DataModel.xcdatamodeld in Sources */,
 				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
 				F2770CE02569D1B200B2943E /* UserToken.swift in Sources */,
@@ -751,6 +779,19 @@
 			productName = iActivityIndicator;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FBA92E1F2704D26000751FAC /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FBA92E202704D26000751FAC /* Database.xcdatamodel */,
+			);
+			currentVersion = FBA92E202704D26000751FAC /* Database.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F2799812254BA53C003AD7EB /* Project object */;
 }

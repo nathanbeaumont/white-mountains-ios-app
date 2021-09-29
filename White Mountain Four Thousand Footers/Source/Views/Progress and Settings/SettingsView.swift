@@ -41,7 +41,7 @@ struct SettingsView: View {
     }
 
     private func updateProgress() {
-        let _ = mountainDataSource.$mountainPeaksHiked.sink { mountainPeaksHiked in
+        let _ = mountainDataSource.$mountainBags.sink { mountainPeaksHiked in
             progress = 1 - Float((mountainDataSource.mountainPeaks.count - mountainPeaksHiked.count)) / Float(mountainDataSource.mountainPeaks.count)
             progressText = "You've hiked \(mountainPeaksHiked.count) out of 48 peaks!"
         }

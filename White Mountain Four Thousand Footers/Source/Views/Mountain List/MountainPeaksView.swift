@@ -33,7 +33,7 @@ struct MountainPeaksView: View {
                         .cornerRadius(15.0)
 
                     List(mountainDataSource.mountainPeaks, id: \.id) { peak in
-                        let peakHiked: Bool = mountainDataSource.mountainPeaksHiked.peakHiked(peak.id)
+                        let peakHiked: Bool = mountainDataSource.mountainBags.peakHiked(peak.id)
                         MountainPeakCell(mountainPeak: peak,
                                          peakHiked: peakHiked)
                     }

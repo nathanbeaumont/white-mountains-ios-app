@@ -9,4 +9,9 @@ import Foundation
 
 struct AppConstants {
     static let appVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+
+    struct Database {
+        static let MountainPeakEntity = "MountainPeak"
+        static let MountainBagEntity = "MountainBagCoreData"
+    }
 }
