@@ -72,7 +72,7 @@ struct MountainPeakCell: View {
         }
         .padding(10)
         .background(currentMode == .dark ?  Color.black : Color.white)
-        .listRowBackground(Color.white)
+        .listRowBackground(Color.clear)
         .cornerRadius(10.0)
         .sheet(isPresented: $isPresented) {
             WebView(url: mountainPeak.urls.first!)

@@ -16,9 +16,6 @@ struct MountainPeaksView: View {
         UITableViewCell.appearance().backgroundColor = UIColor.clear
     }
 
-    @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
-    let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.MountainPeakBagged)
-
     var body: some View {
         ZStack {
             GeometryReader { geometry in
@@ -28,25 +25,45 @@ struct MountainPeaksView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack(alignment: .center, spacing: 15.0) {
-                    ListFilterView(mountainDataSource: mountainDataSource)
+                    ListFilterView()
                         .frame(width: geometry.size.width - 32.0, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                        .cornerRadius(15.0)
 
-                    List(mountainDataSource.mountainPeaks, id: \.id) { peak in
-                        let peakHiked: Bool = mountainDataSource.mountainBags.peakHiked(peak.id)
-                        MountainPeakCell(mountainPeak: peak,
-                                         peakHiked: peakHiked)
-                    }
-                    .frame(width: geometry.size.width)
-                    .listRowInsets(.none)
-                    .listStyle(SidebarListStyle())
-                    .onAppear(perform: mountainDataSource.loadMountainPeaks)
-                    .onReceive(publisher, perform: { _ in
-                        self.mountainDataSource.getPeaksBagged()
-                    })
+                    MountainList(geometry: geometry)
                 }
             }
         }
+    }
+}
+
+struct MountainList: View {
+
+    // MARK: Reactive Properties
+    let geometry: GeometryProxy
+    @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
+    let publisher = NotificationCenter.default.publisher(for: NSNotification.Name.MountainPeakBagged)
+
+    var body: some View {
+        List(mountainDataSource.mountainPeaks, id: \.id) { peak in
+            let peakHiked: Bool = mountainDataSource.mountainBags.peakHiked(peak.id)
+            if #available(iOS 15.0, *) {
+                MountainPeakCell(mountainPeak: peak,
+                                 peakHiked: peakHiked)
+                    .listRowSeparator(.hidden)
+            } else {
+                MountainPeakCell(mountainPeak: peak,
+                                 peakHiked: peakHiked)
+            }
+        }
+        .frame(width: geometry.size.width)
+        .listRowInsets(.none)
+        .listStyle(.grouped)
+        .onAppear(perform: {
+            mountainDataSource.loadMountainPeaks()
+            UITableView.appearance().separatorStyle = .none
+        })
+        .onReceive(publisher, perform: { _ in
+            self.mountainDataSource.getPeaksBagged()
+        })
     }
 }
 
@@ -60,7 +77,7 @@ struct ListFilterView: View {
     }
 
     // MARK: Reactive Properties
-    @ObservedObject fileprivate var mountainDataSource: MountainDataSource
+    @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
     @State private var listFilterState: ListFilterView.ListFilterState = .elevationDescending
 
     //MARK : Environment Properties
@@ -117,9 +134,8 @@ struct ListFilterView: View {
             }
             .padding(15.0)
             .background(currentMode == .dark ? Color.black : Color.white)
-
         }
-
+        .cornerRadius(15.0)
     }
 
     private func elevationButtonPressed() {
