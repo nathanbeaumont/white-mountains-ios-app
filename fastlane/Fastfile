@@ -3,6 +3,13 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new release build to the App Store"
   lane :release do
+    api_key = app_store_connect_api_key(
+      key_id: "5HH2M285QC",
+      issuer_id: "69a6de97-81a7-47e3-e053-5b8c7c11a4d1",
+      key_filepath: "AuthKey_5HH2M285QC.p8",
+      duration: 1200, 
+      in_house: false)
+
   	match(git_basic_authorization: ENV['MATCH_AUTH_GITHUB'])
   	match(type: "appstore", readonly: false)
   	increment_build_number
@@ -10,7 +17,10 @@ platform :ios do
     		  scheme: "White Mountain Four Thousand Footers",
     		  configuration: "Release",
     		  clean: true)
-    upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+    upload_to_app_store(api_key: api_key, 
+                        skip_metadata: true,
+                        skip_screenshots: true,
+                        precheck_include_in_app_purchases: false)
   end
 
   desc "Build the application"

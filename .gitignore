@@ -49,5 +49,7 @@ report.html
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
+*.p8
+*.p12
 White Mountain Four Thousand Footers.app.dSYM.zip
 White Mountain Four Thousand Footers.ipa
