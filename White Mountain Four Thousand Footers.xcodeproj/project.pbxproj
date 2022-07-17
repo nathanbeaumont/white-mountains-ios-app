@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */; };
 		F20EA06F25574EAE0048F982 /* SignInLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EA06E25574EAE0048F982 /* SignInLandingView.swift */; };
 		F2125FA02569840D00764467 /* SignInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2125F9F2569840D00764467 /* SignInInfo.swift */; };
 		F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E2E257313D4008923E4 /* MountainBag.swift */; };
@@ -37,7 +36,6 @@
 		F2B4A07C25AA224C002319B7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07B25AA224C002319B7 /* ProgressView.swift */; };
 		F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */; };
 		F2CA291E25EC3C010033E945 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */; };
-		F2CA292225EC3E0C0033E945 /* iActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = F2CA292125EC3E0C0033E945 /* iActivityIndicator */; };
 		F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF42555F166000269EE /* MountainPeakCell.swift */; };
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
 		F2CDCDFC25560250000269EE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFB25560250000269EE /* Font.swift */; };
@@ -58,13 +56,16 @@
 		FB97F4F42700EAF100BC1FEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */; };
 		FBA92E212704D26000751FAC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBA92E1F2704D26000751FAC /* DataModel.xcdatamodeld */; };
 		FBA92E242704FAFD00751FAC /* DatabaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA92E232704FAFD00751FAC /* DatabaseFetcher.swift */; };
+		FBD01C3F2884BD8D00E30AF1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C3E2884BD8D00E30AF1 /* Alamofire */; };
+		FBD01C422884BDC700E30AF1 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */; };
+		FBD01C452884BE4900E30AF1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */; };
+		FBD01C472884BE4900E30AF1 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C462884BE4900E30AF1 /* FirebaseAnalyticsSwift */; };
+		FBD01C492884BE4900E30AF1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */; };
+		FBD01C4C2884BEC500E30AF1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C4B2884BEC500E30AF1 /* KeychainAccess */; };
 		FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_White_Mountain_Four_Thousand_Footers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		970DD44DBF43FF3B62B0F504 /* Pods-White Mountain Four Thousand Footers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.debug.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.debug.xcconfig"; sourceTree = "<group>"; };
-		A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-White Mountain Four Thousand Footers.release.xcconfig"; path = "Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers.release.xcconfig"; sourceTree = "<group>"; };
 		F20EA06E25574EAE0048F982 /* SignInLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInLandingView.swift; sourceTree = "<group>"; };
 		F2125F9F2569840D00764467 /* SignInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInfo.swift; sourceTree = "<group>"; };
 		F2163E2E257313D4008923E4 /* MountainBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainBag.swift; sourceTree = "<group>"; };
@@ -124,31 +125,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59472986B650F4B2B92BA213 /* Pods_White_Mountain_Four_Thousand_Footers.framework in Frameworks */,
-				F2CA292225EC3E0C0033E945 /* iActivityIndicator in Frameworks */,
+				FBD01C422884BDC700E30AF1 /* ActivityIndicatorView in Frameworks */,
+				FBD01C4C2884BEC500E30AF1 /* KeychainAccess in Frameworks */,
+				FBD01C452884BE4900E30AF1 /* FirebaseAnalytics in Frameworks */,
+				FBD01C492884BE4900E30AF1 /* FirebaseCrashlytics in Frameworks */,
+				FBD01C3F2884BD8D00E30AF1 /* Alamofire in Frameworks */,
+				FBD01C472884BE4900E30AF1 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86E82F859AE31B230A4E11EE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				593548B41E9CD2CBA4861D64 /* Pods_White_Mountain_Four_Thousand_Footers.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B161302FD99F50FBF3E0CE03 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				970DD44DBF43FF3B62B0F504 /* Pods-White Mountain Four Thousand Footers.debug.xcconfig */,
-				A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		F20EA06D25574E8E0048F982 /* Login Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,8 +212,6 @@
 			children = (
 				F279981C254BA53C003AD7EB /* White Mountain Four Thousand Footers */,
 				F279981B254BA53C003AD7EB /* Products */,
-				B161302FD99F50FBF3E0CE03 /* Pods */,
-				86E82F859AE31B230A4E11EE /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -402,11 +388,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2799829254BA53E003AD7EB /* Build configuration list for PBXNativeTarget "White Mountain Four Thousand Footers" */;
 			buildPhases = (
-				14AF5CE2C316C9ABC2AE86AC /* [CP] Check Pods Manifest.lock */,
 				F2799816254BA53C003AD7EB /* Sources */,
 				F2799817254BA53C003AD7EB /* Frameworks */,
 				F2799818254BA53C003AD7EB /* Resources */,
-				669B1D0C605E7BE20F08DAD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,7 +398,12 @@
 			);
 			name = "White Mountain Four Thousand Footers";
 			packageProductDependencies = (
-				F2CA292125EC3E0C0033E945 /* iActivityIndicator */,
+				FBD01C3E2884BD8D00E30AF1 /* Alamofire */,
+				FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */,
+				FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */,
+				FBD01C462884BE4900E30AF1 /* FirebaseAnalyticsSwift */,
+				FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */,
+				FBD01C4B2884BEC500E30AF1 /* KeychainAccess */,
 			);
 			productName = "White Mountain Four Thousand Footers";
 			productReference = F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */;
@@ -445,6 +434,10 @@
 			mainGroup = F2799811254BA53B003AD7EB;
 			packageReferences = (
 				F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */,
+				FBD01C3D2884BD8D00E30AF1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+				FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = F279981B254BA53C003AD7EB /* Products */;
 			projectDirPath = "";
@@ -467,48 +460,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		14AF5CE2C316C9ABC2AE86AC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-White Mountain Four Thousand Footers-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		669B1D0C605E7BE20F08DAD7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-White Mountain Four Thousand Footers/Pods-White Mountain Four Thousand Footers-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2799816254BA53C003AD7EB /* Sources */ = {
@@ -686,7 +637,6 @@
 		};
 		F279982A254BA53E003AD7EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 970DD44DBF43FF3B62B0F504 /* Pods-White Mountain Four Thousand Footers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -713,7 +663,6 @@
 		};
 		F279982B254BA53E003AD7EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4899F5D90EC690CFADF0620 /* Pods-White Mountain Four Thousand Footers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -770,13 +719,70 @@
 				minimumVersion = 0.4.1;
 			};
 		};
+		FBD01C3D2884BD8D00E30AF1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F2CA292125EC3E0C0033E945 /* iActivityIndicator */ = {
+		FBD01C3E2884BD8D00E30AF1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */;
-			productName = iActivityIndicator;
+			package = FBD01C3D2884BD8D00E30AF1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+		FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FBD01C462884BE4900E30AF1 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		FBD01C4B2884BEC500E30AF1 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 

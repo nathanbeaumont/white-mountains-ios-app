@@ -21,7 +21,7 @@ struct Spinner: View {
                         .frame(width: 75, height: 75, alignment: .center)
                         .foregroundColor(Color.Custom.backgroundGreen)
                         .cornerRadius(15.0)
-                    ActivityIndicatorView(isVisible: $isAnimating, type: .default)
+                    ActivityIndicatorView(isVisible: $isAnimating, type: .default())
                         .foregroundColor(Color.Custom.darkBackgroundGreen)
                         .background(Color.clear)
                         .frame(width: 50, height: 50, alignment: .center)
