@@ -5,7 +5,6 @@
 //  Created by Nathan Beaumont on 11/1/20.
 //
 
-import Alamofire
 import Foundation
 
 struct APIRequestFactory {

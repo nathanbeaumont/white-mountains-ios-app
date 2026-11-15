@@ -85,7 +85,7 @@ struct ChangePassword: View {
                 APIClient.shared.perform(request: changePassword) { _ in
                     activeAlert = .success
                     showingAlertView = true
-                } failure: { error, response in
+                } failure: { _ in
                     activeAlert = .failure
                     showingAlertView = true
                 }

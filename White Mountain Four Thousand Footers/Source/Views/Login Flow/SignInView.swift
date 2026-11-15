@@ -76,7 +76,7 @@ struct SignInView: View {
             KeyChain.shared.mostRecentPasswordResetToken = nil
             viewRouter.currentState = .authenticated
             Analytics.logEvent("New_App_Launch", parameters: [:])
-        } failure: { error, response in
+        } failure: { _ in
             showingAlert = true
         }
     }

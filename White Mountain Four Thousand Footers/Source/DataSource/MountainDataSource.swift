@@ -5,7 +5,6 @@
 //  Created by Nathan Beaumont on 12/30/20.
 //
 
-import Alamofire
 import Combine
 import CoreData
 import Firebase
@@ -136,7 +135,7 @@ final class MountainDataSource: ObservableObject {
                     .forEach { request in
                         APIClient.shared.performBackgroundRequest(request: request,
                                                                   success: { _ in  },
-                                                                  failure: { _,_ in })
+                                                                  failure: { _ in })
                     }
             }, failure: nil)
 

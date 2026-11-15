@@ -88,7 +88,7 @@ struct ForgotPasswordScreen: View {
         APIClient.shared.perform(request: apiRequest) { (apiError) in
             showingSuccessAlert = true
             hideKeyboard()
-        } failure: { (error, dataResponse) in
+        } failure: { _ in
             hideKeyboard()
             showingErrorAlert = true
         }

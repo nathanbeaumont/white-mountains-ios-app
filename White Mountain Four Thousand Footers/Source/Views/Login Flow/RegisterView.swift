@@ -75,8 +75,8 @@ struct RegisterView: View {
                     Analytics.logEvent("New_User_Created", parameters: [:])
 
                     // Set Home Screen
-                } failure: { error, response in
-                    if response.response?.statusCode == 400 {
+                } failure: { error in
+                    if (error as? APIClientError)?.statusCode == 400 {
                         // User already exists error
                         alertText = "User account could not be created. This email may already be in use."
                         showingAlert = true
