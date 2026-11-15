@@ -22,7 +22,7 @@ struct ProgressBar: View {
                 .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color.Custom.darkBackgroundGreen)
                 .rotationEffect(Angle(degrees: 270.0))
-                .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                .animation(.easeIn, value: progress)
 
             Text(String(format: "%0.0f%%", min(self.progress, 1.0) * 100.0))
                 .font(Font.avenirMedium(withSize: 30.0))
