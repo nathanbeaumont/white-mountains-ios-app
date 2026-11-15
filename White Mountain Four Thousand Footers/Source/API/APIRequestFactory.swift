@@ -9,57 +9,6 @@ import Foundation
 
 struct APIRequestFactory {
 
-    // MARK: Registration Requests
-
-    static func createNewUser(newUser: RegisterInfo) -> APIRequest<UserToken> {
-        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
-                                         path: "users/create",
-                                         modelClass: UserToken.self)
-        apirequest.parameters = [RegisterInfo.CodingKeys.email.stringValue: newUser.email,
-                                 RegisterInfo.CodingKeys.name.stringValue: newUser.name,
-                                 RegisterInfo.CodingKeys.password.stringValue: newUser.password]
-
-        return apirequest
-    }
-
-    static func initiateForgotPassword(emailAddress: String) -> APIRequest<APIError> {
-        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
-                                         path: "users/password_reset",
-                                         modelClass: APIError.self)
-        let passwordReset = PasswordReset(emailAddress: emailAddress)
-        KeyChain.shared.mostRecentPasswordResetToken = passwordReset
-        apirequest.parameters = [PasswordReset.CodingKeys.email.stringValue: passwordReset.email,
-                                 PasswordReset.CodingKeys.resetToken.stringValue: passwordReset.resetToken.uuidString]
-
-        return apirequest
-    }
-
-    static func changePassword(_ model: ChangePasswordModel) -> APIRequest<APIError> {
-        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
-                                         path: "users/password_change",
-                                         modelClass: APIError.self)
-        apirequest.parameters = [PasswordReset.CodingKeys.email.stringValue: model.email,
-                                 PasswordReset.CodingKeys.resetToken.stringValue: model.resetToken.uuidString,
-                                 "password": model.newPassword]
-
-        return apirequest
-    }
-
-    static func signInUser(userCrudentials: SignInInfo) -> APIRequest<UserToken> {
-        var apirequest = APIRequest.init(methodType: HTTPMethod.post,
-                                         path: "users/login",
-                                         modelClass: UserToken.self)
-        apirequest.parameters = [SignInInfo.CodingKeys.email.stringValue: userCrudentials.email,
-                                 SignInInfo.CodingKeys.password.stringValue: userCrudentials.password]
-        return apirequest
-    }
-
-    static func deleteUser() -> APIRequest<APIError> {
-        return APIRequest.init(methodType: HTTPMethod.delete,
-                               path: "users/remove",
-                               modelClass: APIError.self)
-    }
-
     // MARK: Mountain Peak Requests
 
     static func mountainPeaks() -> APIRequest<[MountainPeak]> {

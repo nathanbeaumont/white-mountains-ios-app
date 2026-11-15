@@ -10,26 +10,13 @@ import SwiftUI
 struct SettingsView: View {
 
     @ObservedObject fileprivate var mountainDataSource = MountainDataSource.shared
-    @EnvironmentObject var viewRouter: ViewRouter
     @State var progress: Float = 0.0
     @State var progressText: String = ""
-    @State var isPresentingForgotPasswordFlow: Bool = false
 
     var body: some View {
         VStack {
             ProgressView(progressValue: $progress, progressText: $progressText)
-            List {
-                SettingsCell(title: "Change Password", action: {
-                    isPresentingForgotPasswordFlow = true
-                })
-                .sheet(isPresented: $isPresentingForgotPasswordFlow, content: {
-                    ForgotPasswordScreen(titleText: "Reset Password")
-                })
-
-
-                DeleteCell().environmentObject(viewRouter)
-                LogoutCell().environmentObject(viewRouter)
-            }
+            Spacer()
 
             Text("Application Version: \(AppConstants.appVersion)")
                 .font(Font.avenirHeavy(withSize: 17.0))

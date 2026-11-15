@@ -28,23 +28,4 @@ final class KeyChain {
             keyChain[UserAccessTokenKey] = newValue
         }
     }
-
-    private let PasswordResetKey = "PasswordResetKey"
-    var mostRecentPasswordResetToken: PasswordReset? {
-        get {
-            let decoder = JSONDecoder()
-            if let data = try? keyChain.getData(PasswordResetKey),
-               let passwordReset = try? decoder.decode(PasswordReset.self, from: data) {
-                return passwordReset
-            }
-
-            return nil
-        }
-        set {
-            let encoder = JSONEncoder()
-            if let data = try? encoder.encode(newValue) {
-                try? keyChain.set(data, key: PasswordResetKey)
-            }
-        }
-    }
 }
