@@ -51,19 +51,22 @@ final class MountainDataSource: ObservableObject {
 
     // MARK: Peak Bagging
 
-    func bagNewPeak(mountainId: Int, successClosure: () -> Void) {
+    func bagNewPeak(mountainId: Int) {
         let managedContext = PersistenceController.shared.container.viewContext
         let bag = MountainBagCoreData(mountainId: mountainId, insertInto: managedContext)
         managedContext.insert(bag)
         PersistenceController.shared.save()
-        successClosure()
-        self.objectWillChange.send()
-        self.mountainBags.append(MountainBag(mountainId: mountainId))
+
+        // Mutated inside withAnimation so the row's checkmark fades in.
+        withAnimation(.easeInOut(duration: 0.5)) {
+            self.objectWillChange.send()
+            self.mountainBags.append(MountainBag(mountainId: mountainId))
+        }
 
         Analytics.logEvent("Peak_Bagged", parameters: ["peak_id": mountainId])
     }
 
-    func removePeak(mountainId: Int, successClosure: () -> Void) {
+    func removePeak(mountainId: Int) {
         let managedContext = PersistenceController.shared.container.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: AppConstants.Database.MountainBagEntity)
         do {
@@ -74,10 +77,10 @@ final class MountainDataSource: ObservableObject {
                 }
             }
             PersistenceController.shared.save()
-            self.objectWillChange.send()
-            self.mountainBags = self.mountainBags.filter({ $0.mountainId != mountainId })
-
-            successClosure()
+            withAnimation(.easeInOut(duration: 0.5)) {
+                self.objectWillChange.send()
+                self.mountainBags = self.mountainBags.filter({ $0.mountainId != mountainId })
+            }
         } catch let error as NSError {
             print("Could not find mountain bag to delete. \(error), \(error.userInfo)")
         }
