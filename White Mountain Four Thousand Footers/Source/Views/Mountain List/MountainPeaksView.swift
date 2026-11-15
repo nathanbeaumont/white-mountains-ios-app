@@ -19,7 +19,7 @@ struct MountainPeaksView: View {
     var body: some View {
         ZStack {
             GeometryReader { geometry in
-                Image("Trail_Path")
+                Image(AppConstants.Background.launchImageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
