@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,7 +59,6 @@
 		FBD01C3F2884BD8D00E30AF1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C3E2884BD8D00E30AF1 /* Alamofire */; };
 		FBD01C422884BDC700E30AF1 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */; };
 		FBD01C452884BE4900E30AF1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */; };
-		FBD01C472884BE4900E30AF1 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C462884BE4900E30AF1 /* FirebaseAnalyticsSwift */; };
 		FBD01C492884BE4900E30AF1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */; };
 		FBD01C4C2884BEC500E30AF1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C4B2884BEC500E30AF1 /* KeychainAccess */; };
 		FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */; };
@@ -130,7 +129,6 @@
 				FBD01C452884BE4900E30AF1 /* FirebaseAnalytics in Frameworks */,
 				FBD01C492884BE4900E30AF1 /* FirebaseCrashlytics in Frameworks */,
 				FBD01C3F2884BD8D00E30AF1 /* Alamofire in Frameworks */,
-				FBD01C472884BE4900E30AF1 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +399,6 @@
 				FBD01C3E2884BD8D00E30AF1 /* Alamofire */,
 				FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */,
 				FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */,
-				FBD01C462884BE4900E30AF1 /* FirebaseAnalyticsSwift */,
 				FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */,
 				FBD01C4B2884BEC500E30AF1 /* KeychainAccess */,
 			);
@@ -433,7 +430,6 @@
 			);
 			mainGroup = F2799811254BA53B003AD7EB;
 			packageReferences = (
-				F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */,
 				FBD01C3D2884BD8D00E30AF1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
@@ -570,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -625,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -647,7 +643,7 @@
 				DEVELOPMENT_TEAM = NLJT9N54Y2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "White Mountain Four Thousand Footers/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,7 +669,7 @@
 				DEVELOPMENT_TEAM = NLJT9N54Y2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "White Mountain Four Thousand Footers/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,36 +707,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F2CA292025EC3E0C0033E945 /* XCRemoteSwiftPackageReference "iActivityIndicator" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MojtabaHs/iActivityIndicator.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.1;
-			};
-		};
 		FBD01C3D2884BD8D00E30AF1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 5.6.0;
+				kind = exactVersion;
+				version = 5.12.2;
 			};
 		};
 		FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.1.0;
+				kind = exactVersion;
+				version = 2.0.2;
 			};
 		};
 		FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 9.3.0;
+				kind = exactVersion;
+				version = 13.2.0;
 			};
 		};
 		FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
@@ -768,11 +756,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
-		};
-		FBD01C462884BE4900E30AF1 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
 		};
 		FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -21,14 +21,6 @@ jobs:
     - name: Bundle Install
       run: bundle install
 
-    - name: setup-cocoapods
-      uses: maxim-lobanov/setup-cocoapods@v1
-      with:
-        version: 1.10.1
-
-    - name: Install Dependencies
-      run: pod install --repo-update
-
     - uses: maierj/fastlane-action@v2.0.1
       env:
         MATCH_REPO: ${{ secrets.MATCH_REPO }}

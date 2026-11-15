@@ -13,7 +13,7 @@ platform :ios do
   	match(git_basic_authorization: ENV['MATCH_AUTH_GITHUB'])
   	match(type: "appstore", readonly: false)
   	increment_build_number
-    build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", 
+    build_app(project: "White Mountain Four Thousand Footers.xcodeproj", 
     		  scheme: "White Mountain Four Thousand Footers",
     		  configuration: "Release",
     		  clean: true)
@@ -25,7 +25,7 @@ platform :ios do
 
   desc "Build the application"
   lane :build do
-  	build_app(workspace: "White Mountain Four Thousand Footers.xcworkspace", 
+  	build_app(project: "White Mountain Four Thousand Footers.xcodeproj", 
   			  scheme: "White Mountain Four Thousand Footers",
   		 	  skip_profile_detection: true, 
   		 	  skip_codesigning: true, 

@@ -28,8 +28,6 @@ path
 *.dat
 *.dep
 
-# Cocoapods
-Pods
 .bundle/config
 
 # Intelli-J
