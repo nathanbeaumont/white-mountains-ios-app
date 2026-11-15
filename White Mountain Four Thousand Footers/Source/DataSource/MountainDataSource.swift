@@ -97,10 +97,9 @@ final class MountainDataSource: ObservableObject {
 
     func generateMapAnnotations() {
         mapAnnotations = mountainPeaks.map { peak -> MountainPeakAnnotation in
-            return MountainPeakAnnotation(name: peak.name,
+            return MountainPeakAnnotation(id: peak.id,
                                           latitude: peak.latitude,
-                                          longitude: peak.longitude,
-                                          peakHiked: mountainBags.peakHiked(peak.id))
+                                          longitude: peak.longitude)
         }
     }
 }
