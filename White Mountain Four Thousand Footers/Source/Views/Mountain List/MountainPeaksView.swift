@@ -56,7 +56,8 @@ struct MountainList: View {
         }
         .frame(width: geometry.size.width)
         .listRowInsets(.none)
-        .listStyle(.grouped)
+        .listStyle(.plain)
+        .hidingListBackground()
         .onAppear(perform: {
             mountainDataSource.loadMountainPeaks()
             UITableView.appearance().separatorStyle = .none
@@ -64,6 +65,18 @@ struct MountainList: View {
         .onReceive(publisher, perform: { _ in
             self.mountainDataSource.getPeaksBagged()
         })
+    }
+}
+
+private extension View {
+    /// iOS 16+ lists draw their own background, which would cover the trail image behind the list.
+    @ViewBuilder
+    func hidingListBackground() -> some View {
+        if #available(iOS 16.0, *) {
+            scrollContentBackground(.hidden)
+        } else {
+            self
+        }
     }
 }
 
