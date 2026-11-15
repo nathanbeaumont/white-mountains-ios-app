@@ -1,0 +1,434 @@
+[
+  {
+    "mountain_id": 1,
+    "mountain_name": "Washington",
+    "elevation": 6288,
+    "ascent": 4491,
+    "latitude": 44.2705408,
+    "longitude": -71.3034539,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/washington/mount-washington,https://www.alltrails.com/trail/us/new-hampshire/tuckerman-ravine-trail-to-mount-washington"
+  },
+  {
+    "mountain_id": 2,
+    "mountain_name": "Adams",
+    "elevation": 5774,
+    "ascent": 2033,
+    "latitude": 44.3205215,
+    "longitude": -71.2914281,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-adams-via-air-line-trail"
+  },
+  {
+    "mountain_id": 3,
+    "mountain_name": "Jefferson",
+    "elevation": 5712,
+    "ascent": 1937,
+    "latitude": 44.3044864,
+    "longitude": -71.3176232,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-jefferson-via-caps-ridge-trail"
+  },
+  {
+    "mountain_id": 4,
+    "mountain_name": "Monroe",
+    "elevation": 5384,
+    "ascent": 1919,
+    "latitude": 44.2552105,
+    "longitude": -71.3219402,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-monroe-via-mount-washington"
+  },
+  {
+    "mountain_id": 5,
+    "mountain_name": "Madison",
+    "elevation": 5367,
+    "ascent": 1956,
+    "latitude": 44.3284036,
+    "longitude": -71.2783592,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-madison-via-madison-gulf-trail"
+  },
+  {
+    "mountain_id": 6,
+    "mountain_name": "Lafayette",
+    "elevation": 5260,
+    "ascent": 2786,
+    "latitude": 44.1606532,
+    "longitude": -71.6447069,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-lafayette-and-franconia-ridge-trail-loop"
+  },
+  {
+    "mountain_id": 7,
+    "mountain_name": "Lincoln",
+    "elevation": 5089,
+    "ascent": 2458,
+    "latitude": 44.1488824,
+    "longitude": -71.6446619,
+    "mountain_info_urls": "https://www.alltrails.com/explore/trail/us/new-hampshire/mount-liberty-mount-flume-mount-lincoln-and-mount-lafayette"
+  },
+  {
+    "mountain_id": 8,
+    "mountain_name": "South Twin",
+    "elevation": 4902,
+    "ascent": 1646,
+    "latitude": 44.1875374,
+    "longitude": -71.554918,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/north-twin-south-twin-and-galehead-mountain"
+  },
+  {
+    "mountain_id": 9,
+    "mountain_name": "Carter Dome",
+    "elevation": 4832,
+    "ascent": 1346,
+    "latitude": 44.2672999,
+    "longitude": -71.1792776,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/carter-dome-trail"
+  },
+  {
+    "mountain_id": 10,
+    "mountain_name": "Moosilauke",
+    "elevation": 4802,
+    "ascent": 2107,
+    "latitude": 44.0225228,
+    "longitude": -71.8323401,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-moosilauke-and-south-peak-loop"
+  },
+  {
+    "mountain_id": 11,
+    "mountain_name": "Eisenhower",
+    "elevation": 4780,
+    "ascent": 1998,
+    "latitude": 44.2404128,
+    "longitude": -71.3506449,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-eisenhower-via-crawford-path"
+  },
+  {
+    "mountain_id": 12,
+    "mountain_name": "North Twin",
+    "elevation": 4761,
+    "ascent": 1294,
+    "latitude": 44.2025638,
+    "longitude": -71.5666133,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/north-twin-south-twin-and-galehead-mountain"
+  },
+  {
+    "mountain_id": 13,
+    "mountain_name": "Carrigain",
+    "elevation": 4700,
+    "ascent": 1151,
+    "latitude": 44.0932872,
+    "longitude": -71.4520741,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mt-carrigan-via-nancy-and-norcross-pond-loop"
+  },
+  {
+    "mountain_id": 14,
+    "mountain_name": "Bond",
+    "elevation": 4698,
+    "ascent": 1332,
+    "latitude": 44.1414048,
+    "longitude": -71.5425376,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-bond-and-mount-guyot-via-bondcliff-trail-and-lincoln-woods-trail"
+  },
+  {
+    "mountain_id": 15,
+    "mountain_name": "Middle Carter",
+    "elevation": 4610,
+    "ascent": 1192,
+    "latitude": 44.303119,
+    "longitude": -71.1760511,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/south-carter-middle-carter-via-nineteen-mile-brook-trail"
+  },
+  {
+    "mountain_id": 16,
+    "mountain_name": "West Bond",
+    "elevation": 4540,
+    "ascent": 1155,
+    "latitude": 44.154812,
+    "longitude": -71.5456811,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/bondcliff-mount-bond-and-west-bond"
+  },
+  {
+    "mountain_id": 17,
+    "mountain_name": "Garfield",
+    "elevation": 4500,
+    "ascent": 1645,
+    "latitude": 44.1870082,
+    "longitude": -71.6196702,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-garfield-trail"
+  },
+  {
+    "mountain_id": 18,
+    "mountain_name": "Liberty",
+    "elevation": 4459,
+    "ascent": 1905,
+    "latitude": 44.1158982,
+    "longitude": -71.6507808,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/liberty-and-franconia-ridge-loop"
+  },
+  {
+    "mountain_id": 19,
+    "mountain_name": "South Carter",
+    "elevation": 4430,
+    "ascent": 1189,
+    "latitude": 44.289786,
+    "longitude": -71.1849399,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/south-carter-middle-carter-via-nineteen-mile-brook-trail"
+  },
+  {
+    "mountain_id": 20,
+    "mountain_name": "Wildcat",
+    "elevation": 4422,
+    "ascent": 1234,
+    "latitude": 44.2589539,
+    "longitude": -71.2102173,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/wildcat-ridge-trail--3"
+  },
+  {
+    "mountain_id": 21,
+    "mountain_name": "Hancock",
+    "elevation": 4420,
+    "ascent": 1292,
+    "latitude": 44.0641118,
+    "longitude": -71.5006656,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/hancock-loop-trail"
+  },
+  {
+    "mountain_id": 22,
+    "mountain_name": "South Kinsman",
+    "elevation": 4358,
+    "ascent": 1424,
+    "latitude": 44.1229991,
+    "longitude": -71.7454218,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/north-kinsman-and-south-kinsman-trail-via-lonesome-lake-and-appalachian-trail"
+  },
+  {
+    "mountain_id": 23,
+    "mountain_name": "Field",
+    "elevation": 4340,
+    "ascent": 1544,
+    "latitude": 44.196176,
+    "longitude": -71.4432766,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-tom-mount-field-and-mount-willey-t-route"
+  },
+  {
+    "mountain_id": 24,
+    "mountain_name": "Osceola",
+    "elevation": 4340,
+    "ascent": 1764,
+    "latitude": 44.0014563,
+    "longitude": -71.5446653,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-osceola-and-east-osceola"
+  },
+  {
+    "mountain_id": 25,
+    "mountain_name": "Flume",
+    "elevation": 4328,
+    "ascent": 1655,
+    "latitude": 44.108954,
+    "longitude": -71.6366136,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-liberty-mount-flume-mount-lincoln-and-mount-lafayette"
+  },
+  {
+    "mountain_id": 26,
+    "mountain_name": "South Hancock",
+    "elevation": 4319,
+    "ascent": 1245,
+    "latitude": 44.0709565,
+    "longitude": -71.4963478,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/hancock-loop-trail"
+  },
+  {
+    "mountain_id": 27,
+    "mountain_name": "Pierce",
+    "elevation": 4310,
+    "ascent": 2258,
+    "latitude": 44.2264538,
+    "longitude": -71.3746644,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-pierce-via-crawford-path"
+  },
+  {
+    "mountain_id": 28,
+    "mountain_name": "North Kinsman",
+    "elevation": 4293,
+    "ascent": 1571,
+    "latitude": 44.0392323,
+    "longitude": -71.8007826,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/north-kinsman-and-south-kinsman-trail-via-lonesome-lake-and-appalachian-trail"
+  },
+  {
+    "mountain_id": 29,
+    "mountain_name": "Willey",
+    "elevation": 4285,
+    "ascent": 1382,
+    "latitude": 44.1836763,
+    "longitude": -71.4302205,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-willey-trail"
+  },
+  {
+    "mountain_id": 30,
+    "mountain_name": "Bondcliff",
+    "elevation": 4265,
+    "ascent": 1289,
+    "latitude": 44.1415393,
+    "longitude": -71.5442428,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/bondcliff-mount-bond-and-west-bond"
+  },
+  {
+    "mountain_id": 31,
+    "mountain_name": "Zealand",
+    "elevation": 4260,
+    "ascent": 1269,
+    "latitude": 44.1796661,
+    "longitude": -71.5300878,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/zealand-summit-via-zealand-trail-and-appalachian-trail"
+  },
+  {
+    "mountain_id": 32,
+    "mountain_name": "North Tripyramid",
+    "elevation": 4180,
+    "ascent": 1290,
+    "latitude": 43.9684021,
+    "longitude": -71.4482742,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-tripyramid-loop-trail"
+  },
+  {
+    "mountain_id": 33,
+    "mountain_name": "Cabot",
+    "elevation": 4170,
+    "ascent": 1051,
+    "latitude": 44.5061674,
+    "longitude": -71.4243912,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-cabot-trail"
+  },
+  {
+    "mountain_id": 34,
+    "mountain_name": "East Osceola",
+    "elevation": 4156,
+    "ascent": 1567,
+    "latitude": 44.0057418,
+    "longitude": -71.5289558,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-osceola-and-east-osceola"
+  },
+  {
+    "mountain_id": 35,
+    "mountain_name": "Middle Tripyramid",
+    "elevation": 4140,
+    "ascent": 1254,
+    "latitude": 43.9684021,
+    "longitude": -71.4482742,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-tripyramid-loop-trail"
+  },
+  {
+    "mountain_id": 36,
+    "mountain_name": "Cannon",
+    "elevation": 4100,
+    "ascent": 1659,
+    "latitude": 44.1558957,
+    "longitude": -71.6996462,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/cannon-mountain-via-kinsman-ridge-trail"
+  },
+  {
+    "mountain_id": 37,
+    "mountain_name": "Hale",
+    "elevation": 4054,
+    "ascent": 1312,
+    "latitude": 44.2217193,
+    "longitude": -71.5120774,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-hale-via-hale-brook-trail"
+  },
+  {
+    "mountain_id": 38,
+    "mountain_name": "Jackson",
+    "elevation": 4052,
+    "ascent": 1826,
+    "latitude": 44.2033171,
+    "longitude": -71.3756656,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mt-jackson-webster-loop"
+  },
+  {
+    "mountain_id": 39,
+    "mountain_name": "Tom",
+    "elevation": 4051,
+    "ascent": 1493,
+    "latitude": 44.210313,
+    "longitude": -71.4462635,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-tom-mount-field-and-mount-willey-t-route"
+  },
+  {
+    "mountain_id": 40,
+    "mountain_name": "Wildcat D Peak",
+    "elevation": 4050,
+    "ascent": 1245,
+    "latitude": 44.2492116,
+    "longitude": -71.2243439,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/wildcat-d-via-wildcat-ridge-trail"
+  },
+  {
+    "mountain_id": 41,
+    "mountain_name": "Moriah",
+    "elevation": 4049,
+    "ascent": 1193,
+    "latitude": 44.3403647,
+    "longitude": -71.131761,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-moriah-via-carter-moriah-trail"
+  },
+  {
+    "mountain_id": 42,
+    "mountain_name": "Passaconaway",
+    "elevation": 4043,
+    "ascent": 1232,
+    "latitude": 43.9547919,
+    "longitude": -71.3902174,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-passaconaway-via-diceys-mill-trail"
+  },
+  {
+    "mountain_id": 43,
+    "mountain_name": "Owl's Head",
+    "elevation": 4025,
+    "ascent": 932,
+    "latitude": 44.1443812,
+    "longitude": -71.6050453,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/owls-head-trail"
+  },
+  {
+    "mountain_id": 44,
+    "mountain_name": "Galehead",
+    "elevation": 4024,
+    "ascent": 1243,
+    "latitude": 44.1851665,
+    "longitude": -71.5737979,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/north-twin-south-twin-and-galehead-mountain"
+  },
+  {
+    "mountain_id": 45,
+    "mountain_name": "Whiteface",
+    "elevation": 4020,
+    "ascent": 1300,
+    "latitude": 43.9339552,
+    "longitude": -71.4062902,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-york/whiteface-mountain-summit-trail"
+  },
+  {
+    "mountain_id": 46,
+    "mountain_name": "Waumbek",
+    "elevation": 4006,
+    "ascent": 1244,
+    "latitude": 44.4328364,
+    "longitude": -71.4257792,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-waumbek-and-mount-starr-king-trail"
+  },
+  {
+    "mountain_id": 47,
+    "mountain_name": "Isolation",
+    "elevation": 4004,
+    "ascent": 987,
+    "latitude": 44.2147877,
+    "longitude": -71.3179962,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-isolation-via-glen-boulder-trail"
+  },
+  {
+    "mountain_id": 48,
+    "mountain_name": "Tecumseh",
+    "elevation": 4003,
+    "ascent": 1649,
+    "latitude": 43.9669829,
+    "longitude": -71.5576148,
+    "mountain_info_urls": "https://www.alltrails.com/trail/us/new-hampshire/mount-tecumseh-trail--3"
+  }
+]

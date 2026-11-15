@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB5EA0022C0A000100AB0001 /* mountain_peaks.json in Resources */ = {isa = PBXBuildFile; fileRef = FB5EA0012C0A000100AB0001 /* mountain_peaks.json */; };
 		F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2163E2E257313D4008923E4 /* MountainBag.swift */; };
 		F21E4843257D3BE1007A321D /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21E4842257D3BE1007A321D /* NotificationName.swift */; };
 		F23CAF5825AB751F00D6E3B9 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CAF5725AB751F00D6E3B9 /* SettingsCell.swift */; };
-		F2534215256B152B00F78E79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2534214256B152B00F78E79 /* APIError.swift */; };
 		F26881792554EF0C009F6E9B /* MountainPeaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26881782554EF0C009F6E9B /* MountainPeaksView.swift */; };
-		F2770CF02569D4C600B2943E /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2770CEF2569D4C600B2943E /* KeyChain.swift */; };
 		F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */; };
 		F2799820254BA53C003AD7EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279981F254BA53C003AD7EB /* HomeView.swift */; };
 		F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2799821254BA53E003AD7EB /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 		F2B4A07825AA1DA6002319B7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07725AA1DA6002319B7 /* AppConstants.swift */; };
 		F2B4A07C25AA224C002319B7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B4A07B25AA224C002319B7 /* ProgressView.swift */; };
 		F2C4EEAC259D130F003ECE0A /* MountainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */; };
-		F2CA291E25EC3C010033E945 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */; };
 		F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF42555F166000269EE /* MountainPeakCell.swift */; };
 		F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */; };
 		F2CDCDFC25560250000269EE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CDCDFB25560250000269EE /* Font.swift */; };
@@ -30,29 +28,23 @@
 		F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1A2ED25A3E0B40027162F /* WebInfoView.swift */; };
 		F2D23ACB25618D990074A7C3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23ACA25618D990074A7C3 /* String.swift */; };
 		F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BA6254F95E9002847B1 /* MountainPeak.swift */; };
-		F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAB254F9A22002847B1 /* APIClient.swift */; };
-		F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BAE254F9AD8002847B1 /* APIRequest.swift */; };
-		F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */; };
 		F2FD9FA225D0938200252E23 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD9FA125D0938200252E23 /* Global.swift */; };
 		FB43D06D26016C2F00B17551 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */; };
 		FB510BBE270533060047355D /* PersistanceCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB510BBD270533060047355D /* PersistanceCordinator.swift */; };
 		FB97F4F42700EAF100BC1FEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */; };
 		FBA92E212704D26000751FAC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBA92E1F2704D26000751FAC /* DataModel.xcdatamodeld */; };
 		FBA92E242704FAFD00751FAC /* DatabaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA92E232704FAFD00751FAC /* DatabaseFetcher.swift */; };
-		FBD01C422884BDC700E30AF1 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */; };
 		FBD01C452884BE4900E30AF1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */; };
 		FBD01C492884BE4900E30AF1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */; };
-		FBD01C4C2884BEC500E30AF1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FBD01C4B2884BEC500E30AF1 /* KeychainAccess */; };
 		FBE42A2D26B0D7B1003243CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB5EA0012C0A000100AB0001 /* mountain_peaks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mountain_peaks.json; sourceTree = "<group>"; };
 		F2163E2E257313D4008923E4 /* MountainBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainBag.swift; sourceTree = "<group>"; };
 		F21E4842257D3BE1007A321D /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		F23CAF5725AB751F00D6E3B9 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		F2534214256B152B00F78E79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F26881782554EF0C009F6E9B /* MountainPeaksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeaksView.swift; sourceTree = "<group>"; };
-		F2770CEF2569D4C600B2943E /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "White Mountain Four Thousand Footers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteMountainApp.swift; sourceTree = "<group>"; };
 		F279981F254BA53C003AD7EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -64,7 +56,6 @@
 		F2B4A07725AA1DA6002319B7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F2B4A07B25AA224C002319B7 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		F2C4EEAB259D130F003ECE0A /* MountainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainDataSource.swift; sourceTree = "<group>"; };
-		F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F2CDCDF42555F166000269EE /* MountainPeakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeakCell.swift; sourceTree = "<group>"; };
 		F2CDCDF82555F56F000269EE /* MountainPeak+Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MountainPeak+Fixture.swift"; sourceTree = "<group>"; };
 		F2CDCDFB25560250000269EE /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -73,9 +64,6 @@
 		F2D23ACA25618D990074A7C3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F2D23AD225619F630074A7C3 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		F2F44BA6254F95E9002847B1 /* MountainPeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainPeak.swift; sourceTree = "<group>"; };
-		F2F44BAB254F9A22002847B1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		F2F44BAE254F9AD8002847B1 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestFactory.swift; sourceTree = "<group>"; };
 		F2FD9FA125D0938200252E23 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		FB510BBD270533060047355D /* PersistanceCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceCordinator.swift; sourceTree = "<group>"; };
 		FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -89,8 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD01C422884BDC700E30AF1 /* ActivityIndicatorView in Frameworks */,
-				FBD01C4C2884BEC500E30AF1 /* KeychainAccess in Frameworks */,
 				FBD01C452884BE4900E30AF1 /* FirebaseAnalytics in Frameworks */,
 				FBD01C492884BE4900E30AF1 /* FirebaseCrashlytics in Frameworks */,
 			);
@@ -119,19 +105,10 @@
 		F268817F2554EF64009F6E9B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F2534214256B152B00F78E79 /* APIError.swift */,
 				F2163E2E257313D4008923E4 /* MountainBag.swift */,
 				F2F44BA6254F95E9002847B1 /* MountainPeak.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F2770CE22569D32900B2943E /* Singletons */ = {
-			isa = PBXGroup;
-			children = (
-				F2770CEF2569D4C600B2943E /* KeyChain.swift */,
-			);
-			path = Singletons;
 			sourceTree = "<group>";
 		};
 		F2799811254BA53B003AD7EB = {
@@ -181,7 +158,6 @@
 				F2CDCDF72555F54E000269EE /* Fixtures */,
 				F268817F2554EF64009F6E9B /* Models */,
 				F2799823254BA53E003AD7EB /* Preview Content */,
-				F2770CE22569D32900B2943E /* Singletons */,
 				F2F44BB4254FA317002847B1 /* Views */,
 				F279981D254BA53C003AD7EB /* WhiteMountainApp.swift */,
 				FBE42A2C26B0D7B1003243CC /* AppDelegate.swift */,
@@ -195,6 +171,7 @@
 				FB97F4F32700EAF100BC1FEE /* GoogleService-Info.plist */,
 				F2799821254BA53E003AD7EB /* Assets.xcassets */,
 				F2799826254BA53E003AD7EB /* Info.plist */,
+				FB5EA0012C0A000100AB0001 /* mountain_peaks.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -257,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				F2D1A2ED25A3E0B40027162F /* WebInfoView.swift */,
-				F2CA291D25EC3C010033E945 /* ActivityIndicator.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -266,9 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				FBA92E222704FAE400751FAC /* Database  */,
-				F2F44BAB254F9A22002847B1 /* APIClient.swift */,
-				F2F44BAE254F9AD8002847B1 /* APIRequest.swift */,
-				F2F44BB1254F9C7A002847B1 /* APIRequestFactory.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -319,10 +292,8 @@
 			);
 			name = "White Mountain Four Thousand Footers";
 			packageProductDependencies = (
-				FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */,
 				FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */,
 				FBD01C482884BE4900E30AF1 /* FirebaseCrashlytics */,
-				FBD01C4B2884BEC500E30AF1 /* KeychainAccess */,
 			);
 			productName = "White Mountain Four Thousand Footers";
 			productReference = F279981A254BA53C003AD7EB /* White Mountain Four Thousand Footers.app */;
@@ -352,9 +323,7 @@
 			);
 			mainGroup = F2799811254BA53B003AD7EB;
 			packageReferences = (
-				FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 				FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = F279981B254BA53C003AD7EB /* Products */;
 			projectDirPath = "";
@@ -373,6 +342,7 @@
 				F2799825254BA53E003AD7EB /* Preview Assets.xcassets in Resources */,
 				F2799822254BA53E003AD7EB /* Assets.xcassets in Resources */,
 				FB97F4F42700EAF100BC1FEE /* GoogleService-Info.plist in Resources */,
+				FB5EA0022C0A000100AB0001 /* mountain_peaks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,12 +361,10 @@
 				F2ACF8E7258EACE500493569 /* PeakMap.swift in Sources */,
 				F2799820254BA53C003AD7EB /* HomeView.swift in Sources */,
 				F2CDCE00255602CC000269EE /* Color.swift in Sources */,
-				F2770CF02569D4C600B2943E /* KeyChain.swift in Sources */,
 				F2CDCDFC25560250000269EE /* Font.swift in Sources */,
 				F2CDCDF92555F56F000269EE /* MountainPeak+Fixture.swift in Sources */,
 				F279981E254BA53C003AD7EB /* WhiteMountainApp.swift in Sources */,
 				F2163E2F257313D4008923E4 /* MountainBag.swift in Sources */,
-				F2CA291E25EC3C010033E945 /* ActivityIndicator.swift in Sources */,
 				F2D1A2EE25A3E0B40027162F /* WebInfoView.swift in Sources */,
 				FB510BBE270533060047355D /* PersistanceCordinator.swift in Sources */,
 				F2F44BA7254F95E9002847B1 /* MountainPeak.swift in Sources */,
@@ -405,14 +373,10 @@
 				F2FD9FA225D0938200252E23 /* Global.swift in Sources */,
 				F2B4A07425AA1BA4002319B7 /* SettingsView.swift in Sources */,
 				FBA92E212704D26000751FAC /* DataModel.xcdatamodeld in Sources */,
-				F2F44BB2254F9C7A002847B1 /* APIRequestFactory.swift in Sources */,
 				F2CDCDF52555F166000269EE /* MountainPeakCell.swift in Sources */,
 				F21E4843257D3BE1007A321D /* NotificationName.swift in Sources */,
-				F2F44BAF254F9AD8002847B1 /* APIRequest.swift in Sources */,
 				F2D23ACB25618D990074A7C3 /* String.swift in Sources */,
 				F2B4A07C25AA224C002319B7 /* ProgressView.swift in Sources */,
-				F2F44BAC254F9A22002847B1 /* APIClient.swift in Sources */,
-				F2534215256B152B00F78E79 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,14 +575,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
-			requirement = {
-				kind = exactVersion;
-				version = 2.0.2;
-			};
-		};
 		FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -627,22 +583,9 @@
 				version = 13.2.0;
 			};
 		};
-		FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
-			requirement = {
-				kind = exactVersion;
-				version = 4.2.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FBD01C412884BDC700E30AF1 /* ActivityIndicatorView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FBD01C402884BDC700E30AF1 /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
-			productName = ActivityIndicatorView;
-		};
 		FBD01C442884BE4900E30AF1 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -652,11 +595,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FBD01C432884BE4900E30AF1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
-		};
-		FBD01C4B2884BEC500E30AF1 /* KeychainAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FBD01C4A2884BEC500E30AF1 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
-			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 

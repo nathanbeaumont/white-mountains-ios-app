@@ -1,5 +1,5 @@
 {
-  "originHash" : "b9f2426a80cbf16f544488d8a07eefcacb9533689825a8a20254649f0d619e2f",
+  "originHash" : "a1569f9895aa2be8e24832f98525d5da4eb90b5d158a82691c15b47eb72a13d7",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "26509120768c4add61cc1a63059f15f4fb49edb4",
         "version" : "1.2025051202.0"
-      }
-    },
-    {
-      "identity" : "activityindicatorview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/ActivityIndicatorView.git",
-      "state" : {
-        "revision" : "41f89372c018decaf965e8dddeb6e5347741beb4",
-        "version" : "2.0.2"
       }
     },
     {
@@ -98,15 +89,6 @@
       "state" : {
         "revision" : "040d087ac2267d2ddd4cca36c757d1c6a05fdbfe",
         "version" : "101.0.0"
-      }
-    },
-    {
-      "identity" : "keychainaccess",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
-      "state" : {
-        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
-        "version" : "4.2.2"
       }
     },
     {

@@ -10,6 +10,4 @@ import Foundation
 extension Notification.Name {
 
     static let MountainPeakBagged = Notification.Name("MountainPeakBagged")
-    static let APIRequestStatusChange = Notification.Name("APIRequestStatusChange")
-    static let APIRequestUnauthroizedUser = Notification.Name("APIRequestUnauthroizedUser")
 }

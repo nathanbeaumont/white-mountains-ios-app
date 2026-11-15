@@ -24,4 +24,14 @@ final class PersistenceController {
             self?.container.viewContext.automaticallyMergesChangesFromParent = true
         }
     }
+
+    func save() {
+        let context = container.viewContext
+        guard context.hasChanges else { return }
+        do {
+            try context.save()
+        } catch {
+            print("An error occurred while saving: \(error)")
+        }
+    }
 }
